@@ -41,10 +41,10 @@
 			map.addLayer(Stamen_TonerLite);
 			
 			//load GeoJSON from an external file
-			$.getJSON("coalzone.geojson",function(data){
+			$.getJSON("redmond_trail.json",function(data){
 				//add GeoJSON layer to the map once the file is loaded
-				var coalzone = L.geoJson(data);
-					map.addLayer(coalzone);
+				var redmond_trail = L.geoJson(data);
+					map.addLayer(redmond_trail);
 			});
 		</script>
 
