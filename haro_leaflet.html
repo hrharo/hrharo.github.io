@@ -45,7 +45,7 @@
 				//add GeoJSON layer to the map once the file is loaded
 				var ne_110m_populated_places = L.geoJson(data , {
 					onEachFeature: function(feature, featureLayer) {
-						featureLayer.bindPopup(feature.properties.NAME_1);
+						featureLayer.bindPopup(feature.properties.NAME);
 					}
 				}).addTo(map);
 				map.fitBounds(ne_110m_populated_places.getBounds());					
