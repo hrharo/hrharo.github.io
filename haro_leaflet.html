@@ -41,10 +41,10 @@
 			map.addLayer(Stamen_TonerLite);
 			
 			//load GeoJSON from an external file
-			$.getJSON("redmond_trail.json",function(data){
+			$.getJSON("ne_50m_populated_places.json",function(data){
 				//add GeoJSON layer to the map once the file is loaded
-				var redmond_trail = L.geoJson(data);
-					map.addLayer(redmond_trail);
+				var ne_50m_populated_places.json = L.geoJson(data);
+					map.addLayer(ne_50m_populated_places);
 			});
 		</script>
 
