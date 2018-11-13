@@ -42,7 +42,7 @@
           <li class="selected"><a href="index.html">About</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="googlemaps.html">Google Maps</a></li>
-	  <li><a href="leafletmap.html">Leaflet Map</a></li>
+		  <li><a href="leafletmap.html">Leaflet Map</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
@@ -104,6 +104,8 @@
 						featureLayer.bindPopup(feature.properties.NAME);
 					}
 				}).addTo(map);
+				map.fitBounds(ne_110m_populated_places.getBounds());					
+				});
 			$.getJSON("ne_10m_parks_and_protected_lands_area.json",function(data){
 				//add GeoJSON layer to the map once the file is loaded
 				var ne_10m_parks_and_protected_lands_area = L.geoJson(data , {
