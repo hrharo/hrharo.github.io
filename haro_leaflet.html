@@ -50,6 +50,15 @@
 				}).addTo(map);
 				map.fitBounds(ne_110m_populated_places.getBounds());					
 				});
+			$.getJSON("ne_10m_parks_and_protected_lands_area.json",function(data){
+				//add GeoJSON layer to the map once the file is loaded
+				var ne_10m_parks_and_protected_lands_area = L.geoJson(data , {
+					onEachFeature: function(feature, featureLayer) {
+						featureLayer.bindPopup(feature.properties.NAME);
+					}
+				}).addTo(map);
+				map.fitBounds(ne_10m_parks_and_protected_lands_area.getBounds());					
+				});
 			
 		</script>
 
