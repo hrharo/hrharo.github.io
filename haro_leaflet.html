@@ -43,7 +43,10 @@
 			//load GeoJSON from an external file
 			$.getJSON("ne_110m_populated_places.geojson",function(data){
 				//add GeoJSON layer to the map once the file is loaded
-				var ne_110m_populated_places.geojson = L.geoJson(data);
+				var ne_110m_populated_places = L.geoJson(data , {
+					onEachFeature: function(feature, featureLayer) {
+						featureLayer.bindPopup(feature.properties.NAME_1);
+					}
 					map.addLayer(ne_110m_populated_places);
 			});
 			
