@@ -99,13 +99,6 @@
 
 			$.getJSON("ne_110m_populated_places.json",function(data){
 				//add GeoJSON layer to the map once the file is loaded
-				var ne_110m_populated_places = L.geoJson(data , {				
-					onEachFeature: function(feature, featureLayer) {
-						featureLayer.bindPopup(feature.properties.NAME);
-					}
-				}).addTo(map);				
-				});
-		
 				var geojsonMarkerOptions = {
 				    radius: 8,
 				    fillColor: "#ff7800",
@@ -114,12 +107,14 @@
 				    opacity: 1,
 				    fillOpacity: 0.8
 				};
-
-				L.geoJson(ne_110m_populated_places, {
-				    pointToLayer: function (feature, latlng) {
-					return L.circleMarker(latlng, geojsonMarkerOptions);
-				    }
-				}).addTo(map);	
+				var ne_110m_populated_places = L.geoJson(data , {				
+					onEachFeature: function(feature, featureLayer) {
+						featureLayer.bindPopup(feature.properties.NAME);
+					pointToLayer: function (feature,latlng) {
+						return L.circleMarker(latlng,geojsonMarkerOptions);
+					}
+				}).addTo(map);				
+				});
 		
 			$.getJSON("ne_10m_parks_and_protected_lands_area.json",function(data){
 				//add GeoJSON layer to the map once the file is loaded
