@@ -85,9 +85,8 @@
 
 			var url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_hour.geojson"
 			map.on('load', function(){
-				map.getSource('')
-			})
-			map.addSource('earthquakes',{type: 'geojson', data: url});
+				map.addSource('earthquakes',{type: 'geojson', data: 'url'
+			});
 			
 			map.addLayer({
 				"id":"earthquakes"
