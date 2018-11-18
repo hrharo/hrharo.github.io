@@ -83,25 +83,28 @@
 			zoom: 10.0
 			});
 
-			var url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_hour.geojson"
-			map.on('load', function(){
-				map.addSource('earthquakes',{type: 'geojson', data: 'url'
+			var feed = 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_hour.geojson';
+			//
+			mapboxgl.util.getJSON(feed, function(err, data){
+				map.addSource('earthquakes',{
+					type: 'geojson', 
+					data: 'url'
 			});
 			
+			//
 			map.addLayer({
-				"id":"earthquakes"
-				"type": "FeatureCollection",
-				"metadata": {
-				"generated": 1542516262000,
-				"url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_hour.geojson",
-				"title": "USGS Significant Earthquakes, Past Hour",
-				"status": 200,
-				"api": "1.5.8",
-				"count": 0
-				},
-				"features": [
-
-				]
+			  "type": "FeatureCollection",
+			  "metadata": {
+			    "generated": 1542517901000,
+			    "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_hour.geojson",
+			    "title": "USGS Significant Earthquakes, Past Hour",
+			    "status": 200,
+			    "api": "1.5.8",
+			    "count": 0
+			  },
+			  "features": [
+			    
+			  ]
 			});
 			</script>
 
