@@ -74,7 +74,7 @@
 	    <p> Earthquakes. </p>
         <div id="map"></div>
 			<script>
-			//most instructions from: https://www.mapbox.com/mapbox-gl-js/example/live-geojson/
+			//help from: https://www.mapbox.com/mapbox-gl-js/example/live-geojson/
 			mapboxgl.accessToken = 'pk.eyJ1IjoiaGFyb2giLCJhIjoiY2pvNmpneXhyMGx2ZTNwcXFzYzFzdm52dCJ9.zTx9hlyiDL0--qvBqDUuRw';
 			var map = new mapboxgl.Map({
 			container: 'map',
@@ -82,7 +82,7 @@
 			center: [-71.020000, 42.362400],
 			zoom: 10.0
 			});
-
+			//help from: https://blog.mapbox.com/data-driven-styling-for-live-earthquake-tracking-604bd3767152
 			var feed = 'http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson';
 			mapboxgl.util.getJSON(feed, function(err, data) {
 			 // Add response data as source.
