@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html>
+<!-- This website template was found at: https://www.html5webtemplates.co.uk/templates.html --> 
+<head>
+	<meta charset='utf-8' />
+	<title>Henry R. Haro - Mapbox Map</title>
+	<meta name="description" content="website description" />
+  	<meta name="keywords" content="website keywords, website keywords" />
+  	<meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  	<link rel="stylesheet" type="text/css" href="style/style.css" />
+	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
+	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet' />
+
+	<style>
+	  #map {
+	    width: 100%;
+	    height: 400px;
+	    background-color: grey;
+	  }
+	</style>
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="index.html">Henry R. Haro<span class="logo_colour"></span></a></h1>
+          <h2>GIS & Cartography</h2>
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li class="selected"><a href="index.html">About</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="googlemaps.html">Google Maps</a></li>
+		  <li><a href="leafletmap.html">Leaflet Map</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="content_header"></div>
+    <div id="site_content">
+      <div id="sidebar_container">
+        <div class="sidebar">
+          <div class="sidebar_top"></div>
+          <div class="sidebar_item">
+            <!-- insert your sidebar items here -->
+            <h3>Latest News</h3>
+            <h4>Happy Birthday!</h4>
+            <h5>October 23rd, 2018</h5>
+            <p>Today, my website was born.<br /></p>
+          </div>
+          <div class="sidebar_base"></div>
+        </div>
+        <div class="sidebar">
+          <div class="sidebar_top"></div>
+          <div class="sidebar_item">
+            <h3>UW Tacoma Links</h3>
+            <ul>
+              <li><a href="https://www.tacoma.uw.edu/node/41134">MSGT at UW Tacoma</a></li>
+              <li><a href="http://www.tacoma.uw.edu/urban-studies/urban-studies-home">UW Tacoma Urban Studies</a></li>
+            </ul>
+          </div>
+          <div class="sidebar_base"></div>
+        </div>
+      </div>
+      <div id="content">
+        <!-- insert the page content here -->
+            <h3> My Mapbox demo</h3>
+	    <p> Earthquakes. </p>
+        <div id="map"></div>
+			<script>
+			//help from: https://www.mapbox.com/mapbox-gl-js/example/live-geojson/
+			mapboxgl.accessToken = 'pk.eyJ1IjoiaGFyb2giLCJhIjoiY2pvNmpneXhyMGx2ZTNwcXFzYzFzdm52dCJ9.zTx9hlyiDL0--qvBqDUuRw';
+			
+			//map variable
+			var map = new mapboxgl.Map({
+			container: 'map',
+			style: 'mapbox://styles/haroh/cjombhav72cbj2str4iv092ht',
+			center: [-71.020000, 42.362400],
+			zoom: 0
+			});
+
+			//on map load
+			map.on('load',function(){
+				//add source layer
+				map.addSource('earthquakes', {
+			 	'type': 'geojson',
+			 	'data': 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.geojson'
+			 	});
+			 	//add earthquakes layer
+				map.addLayer({
+					'id':'equakes',
+					'type':'circle',
+					'source':'earthquakes'
+				});
+
+				//add handler for clicking/popups
+				map.on('click','equakes', function (e) {
+					var coordinates = e.features[0].geometry.coordinates.slice();
+			        var description = e.features[0].properties.mag;
+
+			        // Ensure that if the map is zoomed out such that multiple
+			        // copies of the feature are visible, the popup appears
+			        // over the copy being pointed to.
+			        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+			            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+			        }
+			        //make the popup
+			        new mapboxgl.Popup()
+			            .setLngLat(coordinates)
+			            .setHTML(description)
+			            .addTo(map);
+
+			    });
+			    map.setCenter([-122, 47]);
+			});
+
+			</script>
+
+        </div>
+    </div>
+    <div id="content_footer"></div>
+    <div id="footer">
+      <p><a href="index.html">Home</a> | <a href="portfolio.html">Portfolio</a> | <a href="googlemaps.html">Google Maps</a> | <a href="leafletmap.html">Leaflet Map</a> | <a href="contact.html">Contact</a></p>
+      <p>Copyright &copy; simplestyle_horizon | <a href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> | <a href="http://www.html5webtemplates.co.uk">Simple web templates by HTML5</a></p>
+    </div>
+  </div>
+</body>
+</html>
