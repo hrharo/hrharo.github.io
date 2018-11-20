@@ -78,22 +78,22 @@
 			mapboxgl.accessToken = 'pk.eyJ1IjoiaGFyb2giLCJhIjoiY2pvNmpneXhyMGx2ZTNwcXFzYzFzdm52dCJ9.zTx9hlyiDL0--qvBqDUuRw';
 			
 			//map variable
-			var map = new mapboxgl.Map({
+			var map1 = new mapboxgl.Map({
 			container: 'map',
 			style: 'mapbox://styles/haroh/cjop8afn95aw12rphie01ojxg',
 			center: [18.048012, 34.553127],
-			zoom: 0
+			zoom: 8
 			});
 
 			//on map load
-			map.on('load',function(){
+			map1.on('load',function(){
 				//add source layer
-				map.addSource('earthquakes', {
+				map1.addSource('earthquakes', {
 			 	'type': 'geojson',
 			 	'data': 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson'
 			 	});
 			 	//add earthquakes layer
-				map.addLayer({
+				map1.addLayer({
 					'id':'equakes',
 					'type':'circle',
 					'source':'earthquakes',
@@ -108,7 +108,7 @@
 				});
 
 				//add handler for clicking/popups
-				map.on('click','equakes', function (e) {
+				map1.on('click','equakes', function (e) {
 					var coordinates = e.features[0].geometry.coordinates.slice();
 			        var description = 
 			        	'<p>Magnitude:'+e.features[0].properties.mag+
@@ -128,7 +128,7 @@
 			            .addTo(map);
 
 			    });
-			    map.setCenter([18.048012, 34.553127]);
+			    map1.setCenter([18.048012, 34.553127]);
 			});
 
 			</script>
