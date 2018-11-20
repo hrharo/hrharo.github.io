@@ -169,6 +169,9 @@
 				center: new L.LatLng(47.610378, -122.200676),
 				zoom: 12
 			});
+			
+			map.addLayer(Stamen_TonerLite);
+			
 			var plate-boundaries = plate-boundaries.kmz('https://earthquake.usgs.gov/learn/plate-boundaries.kmz')
 				.on('ready',function(){
 					map.fitBounds(tectonic.getBounds());
