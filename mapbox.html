@@ -85,7 +85,8 @@
 			//set map center and zoom
 			map.setCenter([23.727539, 37.983810]);
 			map.setZoom(0);
-			
+			// Add zoom and rotation controls to the map.
+			map.addControl(new mapboxgl.NavigationControl());
 
 			//on map load
 			map.on('load',function(){
@@ -130,8 +131,6 @@
 			            .addTo(map);
 
 			    });
-			    // Add zoom and rotation controls to the map.
-				map.addControl(new mapboxgl.NavigationControl());
 
 				map.setCenter([23.727539, 37.983810]);
 			});
