@@ -114,7 +114,13 @@
 					style: 'mapbox://styles/haroh/cjombhav72cbj2str4iv092ht',
 				});
 				//set map center and zoom
-				map.setCenter([-180, 85]);
+				map.setCenter([[
+						-180,
+						85
+					], [
+						180,
+						-85
+					]]);
 				map.setZoom(0);
 				// Add zoom and rotation controls to the map.
 				map.addControl(new mapboxgl.NavigationControl());
