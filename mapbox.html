@@ -34,6 +34,20 @@
 	    height: 400px;
 	    background-color: grey;
 	  }
+	  #fit {
+        display: block;
+        position: relative;
+        margin: 0px auto;
+        width: 50%;
+        height: 40px;
+        padding: 10px;
+        border: none;
+        border-radius: 3px;
+        font-size: 12px;
+        text-align: center;
+        color: #fff;
+        background: #ee8a65;
+    }
 	</style>
 </head>
 
@@ -89,6 +103,8 @@
             <h3> Earthquakes and Plate Boundaries</h3>
 	    <p> Map 1: Global weekly earthquakes </p>
         <div id="map"></div>
+		<br/>
+		<button id='fit'>Reset Extent</button>
 			<script>
 				//help from: https://www.mapbox.com/mapbox-gl-js/example/live-geojson/
 				mapboxgl.accessToken = 'pk.eyJ1IjoiaGFyb2giLCJhIjoiY2pvNmpneXhyMGx2ZTNwcXFzYzFzdm52dCJ9.zTx9hlyiDL0--qvBqDUuRw';			
@@ -102,6 +118,16 @@
 				map.setZoom(0);
 				// Add zoom and rotation controls to the map.
 				map.addControl(new mapboxgl.NavigationControl());
+				// Add Reset Extent Button: https://www.mapbox.com/mapbox-gl-js/example/fitbounds/
+				document.getElementById('fit').addEventListener('click', function() {
+					map.fitBounds([[
+						23.727539,
+						37.983810
+					], [
+						23.727539,
+						37.983810
+					]]);
+				});
 				//on map load
 				map.on('load',function(){
 					//add source layer
