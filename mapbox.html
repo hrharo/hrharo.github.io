@@ -113,7 +113,49 @@
 	    			});
 	    		});
 			</script>
-        </div>
+		<div id="map1"></div>
+			<script>
+			//basemap from https://leaflet-extras.github.io/leaflet-providers/preview/ 
+			var Stamen_TonerLite = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}', {
+				attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+				subdomains: 'abcd',
+				minZoom: 0,
+				maxZoom: 20,
+				ext: 'png'
+			});
+			
+			var map = new L.Map("map", {
+				center: new L.LatLng(47.610378, -122.200676),
+				zoom: 12
+			});
+
+
+			
+			map.addLayer(Stamen_TonerLite);
+			
+			//load GeoJSON from an external file
+			$.getJSON("ne_110m_populated_places.json",function(data){
+				//add GeoJSON layer to the map once the file is loaded
+				var ne_110m_populated_places = L.geoJson(data , {
+					onEachFeature: function(feature, featureLayer) {
+						featureLayer.bindPopup(feature.properties.NAME);
+					}
+				}).addTo(map);
+				map.fitBounds(ne_110m_populated_places.getBounds());					
+				});
+			$.getJSON("ne_10m_parks_and_protected_lands_area.json",function(data){
+				//add GeoJSON layer to the map once the file is loaded
+				var ne_10m_parks_and_protected_lands_area = L.geoJson(data , {
+					onEachFeature: function(feature, featureLayer) {
+						featureLayer.bindPopup(feature.properties.NAME);
+					}
+				}).addTo(map);
+				map.fitBounds(ne_10m_parks_and_protected_lands_area.getBounds());					
+				});
+			
+		</script>
+    </div>
+		
     </div>
     <div id="content_footer"></div>
     <div id="footer">
