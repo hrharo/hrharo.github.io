@@ -74,127 +74,60 @@
 	    <p> Map 1: Global weekly earthquakes. </p>
         <div id="map"></div>
 			<script>
-			//help from: https://www.mapbox.com/mapbox-gl-js/example/live-geojson/
-			mapboxgl.accessToken = 'pk.eyJ1IjoiaGFyb2giLCJhIjoiY2pvNmpneXhyMGx2ZTNwcXFzYzFzdm52dCJ9.zTx9hlyiDL0--qvBqDUuRw';
-			
-			//map variable
-			var map = new mapboxgl.Map({
-				container: 'map',
-				style: 'mapbox://styles/haroh/cjop8afn95aw12rphie01ojxg',
-			});
-			//set map center and zoom
-			map.setCenter([23.727539, 37.983810]);
-			map.setZoom(0);
-			// Add zoom and rotation controls to the map.
-			map.addControl(new mapboxgl.NavigationControl());
-
-			//on map load
-			map.on('load',function(){
-				//add source layer
-				map.addSource('earthquakes', {
-			 	'type': 'geojson',
-			 	'data': 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson'
-			 	});
-			 	//add earthquakes layer
-				map.addLayer({
-					'id':'equakes',
-					'type':'circle',
-					'source':'earthquakes',
-					'paint': {
-						'circle-color':'#5E4328',
-						'circle-stroke-color': '#B48A7C',
-						'circle-opacity': 0.75,
-						'circle-radius': 8,
-						'circle-stroke-opacity': 0.75,
-						'circle-stroke-width': 2
-						}
+				//help from: https://www.mapbox.com/mapbox-gl-js/example/live-geojson/
+				mapboxgl.accessToken = 'pk.eyJ1IjoiaGFyb2giLCJhIjoiY2pvNmpneXhyMGx2ZTNwcXFzYzFzdm52dCJ9.zTx9hlyiDL0--qvBqDUuRw';			
+				//map variable
+				var map = new mapboxgl.Map({
+					container: 'map',
+					style: 'mapbox://styles/haroh/cjop8afn95aw12rphie01ojxg',
 				});
-
-				//add handler for clicking/popups
-			map.on('click','equakes', function (e) {
-				var coordinates = e.features[0].geometry.coordinates.slice();
-		        //print the properties to the console when clicked
-		        console.log(e.features[0].properties);
-		        //THE HTML ELEMENT THAT WILL GO IN THE POPUP
-		        var description = "<p>Magnitude: " + e.features[0].properties.mag + "</p> <p>Location: " + e.features[0].properties.place + "</p> <p>Link: <a target= '_blank' href='"+e.features[0].properties.url+"'>Details</a></p>";
-
-		        // Ensure that if the map is zoomed out such that multiple
-		        // copies of the feature are visible, the popup appears
-		        // over the copy being pointed to.
-		        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-		            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-		        }
-		        //make the popup
-		        new mapboxgl.Popup()
-		            .setLngLat(coordinates)
-		            .setHTML(description)
-		            .addTo(map);
-
-		    });
+				//set map center and zoom
+				map.setCenter([23.727539, 37.983810]);
+				map.setZoom(0);
+				// Add zoom and rotation controls to the map.
+				map.addControl(new mapboxgl.NavigationControl());
+				//on map load
+				map.on('load',function(){
+					//add source layer
+					map.addSource('earthquakes', {
+				 	'type': 'geojson',
+				 	'data': 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson'
+				 	});
+				 	//add earthquakes layer
+					map.addLayer({
+						'id':'equakes',
+						'type':'circle',
+						'source':'earthquakes',
+						'paint': {
+							'circle-color':'#5E4328',
+							'circle-stroke-color': '#B48A7C',
+							'circle-opacity': 0.75,
+							'circle-radius': 8,
+							'circle-stroke-opacity': 0.75,
+							'circle-stroke-width': 2
+							}
+					});
+					//add handler for clicking/popups
+				map.on('click','equakes', function (e) {
+					var coordinates = e.features[0].geometry.coordinates.slice();
+			        //print the properties to the console when clicked
+			        console.log(e.features[0].properties);
+			        //THE HTML ELEMENT THAT WILL GO IN THE POPUP
+			        var description = "<p>Magnitude: " + e.features[0].properties.mag + "</p> <p>Location: " + e.features[0].properties.place + "</p> <p>Link: <a target= '_blank' href='"+e.features[0].properties.url+"'>Details</a></p>";
+			        // Ensure that if the map is zoomed out such that multiple
+			        // copies of the feature are visible, the popup appears
+			        // over the copy being pointed to.
+			        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+			            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+			        }
+			        //make the popup
+			        new mapboxgl.Popup()
+			            .setLngLat(coordinates)
+			            .setHTML(description)
+			            .addTo(map);
+					});
 			</script>
         </div>
-        <div id="map1"></div>
-			<script>
-			//help from: https://www.mapbox.com/mapbox-gl-js/example/live-geojson/
-			mapboxgl.accessToken = 'pk.eyJ1IjoiaGFyb2giLCJhIjoiY2pvNmpneXhyMGx2ZTNwcXFzYzFzdm52dCJ9.zTx9hlyiDL0--qvBqDUuRw';
-			
-			//map variable
-			var map1 = new mapboxgl.Map({
-				container: 'map',
-				style: 'mapbox://styles/haroh/cjop8afn95aw12rphie01ojxg',
-			});
-			//set map center and zoom
-			map1.setCenter([23.727539, 37.983810]);
-			map1.setZoom(0);
-			// Add zoom and rotation controls to the map.
-			map1.addControl(new mapboxgl.NavigationControl());
-
-			//on map load
-			map1.on('load',function(){
-				//add source layer
-				map1.addSource('earthquakes', {
-			 	'type': 'geojson',
-			 	'data': 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson'
-			 	});
-			 	//add earthquakes layer
-				map1.addLayer({
-					'id':'equakes',
-					'type':'circle',
-					'source':'earthquakes',
-					'paint': {
-						'circle-color':'#5E4328',
-						'circle-stroke-color': '#B48A7C',
-						'circle-opacity': 0.75,
-						'circle-radius': 8,
-						'circle-stroke-opacity': 0.75,
-						'circle-stroke-width': 2
-						}
-				});
-
-				//add handler for clicking/popups
-			map1.on('click','equakes', function (e) {
-				var coordinates = e.features[0].geometry.coordinates.slice();
-		        //print the properties to the console when clicked
-		        console.log(e.features[0].properties);
-		        //THE HTML ELEMENT THAT WILL GO IN THE POPUP
-		        var description = "<p>Magnitude: " + e.features[0].properties.mag + "</p> <p>Location: " + e.features[0].properties.place + "</p> <p>Link: <a target= '_blank' href='"+e.features[0].properties.url+"'>Details</a></p>";
-
-		        // Ensure that if the map is zoomed out such that multiple
-		        // copies of the feature are visible, the popup appears
-		        // over the copy being pointed to.
-		        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-		            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-		        }
-		        //make the popup
-		        new mapboxgl.Popup()
-		            .setLngLat(coordinates)
-		            .setHTML(description)
-		            .addTo(map);
-
-		    });
-			</script>
-        </div>
-
     </div>
     <div id="content_footer"></div>
     <div id="footer">
