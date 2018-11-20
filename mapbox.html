@@ -126,10 +126,15 @@
 				ext: 'png'
 			});
 			
-			var map1 = new L.Map("map", {
+			var map2 = new L.Map("map2", {
 				center: new L.LatLng(47.610378, -122.200676),
 				zoom: 12
-			});	
+			});
+			var plates = plate-boundaries.kmz
+				.on('ready',function(){
+					map.fitBounds(snowPoly.getBounds());
+				})
+			.addTo(map);
 		</script>
 		
     </div>
