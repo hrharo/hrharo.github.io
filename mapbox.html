@@ -149,7 +149,7 @@
 			</script>
 		<br>
 		<p> Map 2: Global Fault Lines </p>
-		<div id="map"></div>
+		<div id="map2"></div>
 			<script>
 			//basemap from https://leaflet-extras.github.io/leaflet-providers/preview/ 
 			var Stamen_TonerLite = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}', {
@@ -160,15 +160,15 @@
 				ext: 'png'
 			});
 			
-			var map = new L.Map("map", {
+			var map2 = new L.Map("map2", {
 				center: new L.LatLng(47.610378, -122.200676),
 				zoom: 12
 			});
 			var plates = plate-boundaries.kmz('https://earthquake.usgs.gov/learn/plate-boundaries.kmz')
 				.on('ready',function(){
-					map.fitBounds(plates.getBounds());
+					map2.fitBounds(plates.getBounds());
 				})
-			.addTo(map);
+			.addTo(map2);
 		</script>
 		
     </div>
