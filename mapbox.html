@@ -119,13 +119,14 @@
 				// Add zoom and rotation controls to the map.
 				map.addControl(new mapboxgl.NavigationControl());
 				// Add Reset Extent Button: https://www.mapbox.com/mapbox-gl-js/example/fitbounds/
+				// Help for bounding coords from: https://stackoverflow.com/questions/11849636/maximum-lat-and-long-bounds-for-the-world-google-maps-api-latlngbounds
 				document.getElementById('fit').addEventListener('click', function() {
 					map.fitBounds([[
-						23.727539,
-						37.983810
+						-180,
+						85
 					], [
-						23.727539,
-						37.983810
+						180,
+						-85
 					]]);
 				});
 				//on map load
