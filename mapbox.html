@@ -111,28 +111,28 @@
 				});
 
 				//add handler for clicking/popups
-				map.on('click','equakes', function (e) {
-					var coordinates = e.features[0].geometry.coordinates.slice();
-			        //print the properties to the console when clicked
-			        console.log(e.features[0].properties);
-			        //THE HTML ELEMENT THAT WILL GO IN THE POPUP
-			        var description = "<p>Magnitude: " + e.features[0].properties.mag + "</p> <p>Location: " + e.features[0].properties.place + "</p> <p>Link: <a target= '_blank' href='"+e.features[0].properties.url+"'>Details</a></p>";
+			map.on('click','equakes', function (e) {
+				var coordinates = e.features[0].geometry.coordinates.slice();
+		        //print the properties to the console when clicked
+		        console.log(e.features[0].properties);
+		        //THE HTML ELEMENT THAT WILL GO IN THE POPUP
+		        var description = "<p>Magnitude: " + e.features[0].properties.mag + "</p> <p>Location: " + e.features[0].properties.place + "</p> <p>Link: <a target= '_blank' href='"+e.features[0].properties.url+"'>Details</a></p>";
 
-			        // Ensure that if the map is zoomed out such that multiple
-			        // copies of the feature are visible, the popup appears
-			        // over the copy being pointed to.
-			        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
-			            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-			        }
-			        //make the popup
-			        new mapboxgl.Popup()
-			            .setLngLat(coordinates)
-			            .setHTML(description)
-			            .addTo(map);
+		        // Ensure that if the map is zoomed out such that multiple
+		        // copies of the feature are visible, the popup appears
+		        // over the copy being pointed to.
+		        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+		            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+		        }
+		        //make the popup
+		        new mapboxgl.Popup()
+		            .setLngLat(coordinates)
+		            .setHTML(description)
+		            .addTo(map);
 
-			    });
+		    });
 
-				map.setCenter([23.727539, 37.983810]);
+			map.setCenter([23.727539, 37.983810]);
 			});
 
 			</script>
