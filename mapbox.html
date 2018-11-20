@@ -10,7 +10,7 @@
   	<link rel="stylesheet" type="text/css" href="style/style.css" />
 	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.js'></script>
-	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' />
+	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.49.0/mapbox-gl.css' rel='stylesheet'/>
 
 	<style>
 	  #map {
@@ -49,14 +49,14 @@
         <!-- insert the page content here -->
             <h3> My Mapbox demo</h3>
 	    <p> Map 1: Global weekly earthquakes. </p>
-        <div id="map">
+        <div id="map"></div>
 			<script>
 				//help from: https://www.mapbox.com/mapbox-gl-js/example/live-geojson/
 				mapboxgl.accessToken = 'pk.eyJ1IjoiaGFyb2giLCJhIjoiY2pvNmpneXhyMGx2ZTNwcXFzYzFzdm52dCJ9.zTx9hlyiDL0--qvBqDUuRw';			
 				//map variable
 				var map = new mapboxgl.Map({
 					container: 'map',
-					style: 'mapbox://styles/haroh/cjop8afn95aw12rphie01ojxg',
+					style: 'mapbox://styles/haroh/cjombhav72cbj2str4iv092ht',
 				});
 				//set map center and zoom
 				map.setCenter([23.727539, 37.983810]);
@@ -113,8 +113,8 @@
 	    			});
 	    		});
 			</script>
-			</div>
-		<div id="map1">
+			
+		<div id="map1"></div>
 			<script>
 			//basemap from https://leaflet-extras.github.io/leaflet-providers/preview/ 
 			var Stamen_TonerLite = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}', {
@@ -130,7 +130,7 @@
 				zoom: 12
 			});	
 		</script>
-		</div>
+		
     </div>
 		
     </div>
