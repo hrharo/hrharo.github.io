@@ -72,7 +72,7 @@
         <!-- insert the page content here -->
             <h3> My Mapbox demo</h3>
 	    <p> Earthquakes. </p>
-        <div id="map"></div>
+        <div id="map1"></div>
 			<script>
 			//help from: https://www.mapbox.com/mapbox-gl-js/example/live-geojson/
 			mapboxgl.accessToken = 'pk.eyJ1IjoiaGFyb2giLCJhIjoiY2pvNmpneXhyMGx2ZTNwcXFzYzFzdm52dCJ9.zTx9hlyiDL0--qvBqDUuRw';
@@ -110,10 +110,10 @@
 				//add handler for clicking/popups
 				map1.on('click','equakes', function (e) {
 					var coordinates = e.features[0].geometry.coordinates.slice();
-			        var description = 
-			        	'<p>Magnitude:'+e.features[0].properties.mag+
-			        	'<br>Location:'+e.features[0].properties.place+
-			        	"<br>Link: <a target= '_blank' href='" +e.features[0].properties.url+'>Event Details</a></P>'
+			        //print the properties to the console when clicked
+			        console.log(e.features[0].properties);
+			        //THE HTML ELEMENT THAT WILL GO IN THE POPUP
+			        var description = "<p>Magnitude: " + e.features[0].properties.mag + "</p> <p>Location: " + e.features[0].properties.place + "</p> <p>Link: <a target= '_blank' href='"+e.features[0].properties.url+"'>Details</a></p>";
 
 			        // Ensure that if the map is zoomed out such that multiple
 			        // copies of the feature are visible, the popup appears
@@ -130,6 +130,13 @@
 			    });
 			    map1.setCenter([23.727539, 37.983810]);
 			});
+
+			</script>
+
+        </div>
+        <div id="map2"></div>
+			<script>
+			
 
 			</script>
 
