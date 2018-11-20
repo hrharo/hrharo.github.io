@@ -113,7 +113,7 @@
 			        var description = 
 			        	'<p>Magnitude:'+e.features[0].properties.mag+
 			        	'<br>Location:'+e.features[0].properties.place+
-			        	'<br>Link:'<a target= '_blank' href=' '+e.features[0].properties.url+'>Event Details</a></P>'
+			        	"<br>Link: <a target= '_blank' href='" +e.features[0].properties.url+'>Event Details</a></P>'
 
 			        // Ensure that if the map is zoomed out such that multiple
 			        // copies of the feature are visible, the popup appears
