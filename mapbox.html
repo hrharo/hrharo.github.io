@@ -164,9 +164,9 @@
 				center: new L.LatLng(47.610378, -122.200676),
 				zoom: 12
 			});
-			var plates = plate-boundaries.kmz
+			var plates = plate-boundaries.kmz('https://earthquake.usgs.gov/learn/plate-boundaries.kmz')
 				.on('ready',function(){
-					map.fitBounds(snowPoly.getBounds());
+					map.fitBounds(plates.getBounds());
 				})
 			.addTo(map);
 		</script>
