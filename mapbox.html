@@ -160,15 +160,15 @@
 				ext: 'png'
 			});
 			
-			var map2 = new L.Map("map2", {
+			var map = new L.Map("map", {
 				center: new L.LatLng(47.610378, -122.200676),
 				zoom: 12
 			});
 			var tectonic = plate-boundaries.kmz('https://earthquake.usgs.gov/learn/plate-boundaries.kmz')
 				.on('ready',function(){
-					map2.fitBounds(tectonic.getBounds());
+					map.fitBounds(tectonic.getBounds());
 				})
-			.addTo(map2);
+			.addTo(map);
 		</script>
 		
     </div>
