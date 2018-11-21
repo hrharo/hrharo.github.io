@@ -77,6 +77,15 @@
 					map.setZoom(0);
 					// Add zoom and rotation controls to the map.
 					map.addControl(new mapboxgl.NavigationControl());
+					// Help for bounding coords from: https://stackoverflow.com/questions/11849636/maximum-lat-and-long-bounds-for-the-world-google-maps-api-latlngbounds
+					document.getElementById('fit').addEventListener('click', function() {
+					map.fitBounds([[
+						-180,
+						85
+					], [
+						180,
+						-85
+					]]);
 					//on map load
 					map.on('load',function(){
 						//add source layer
