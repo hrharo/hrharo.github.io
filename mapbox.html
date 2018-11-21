@@ -193,18 +193,15 @@
 				ext: 'png'
 			});
 			
-			var map = new L.Map("map", {
+			var map2 = new L.Map("map2", {
 				center: new L.LatLng(47.610378, -122.200676),
 				zoom: 12
 			});
 			
-			map.addLayer(Stamen_TonerLite);
+			map2.addLayer(Stamen_TonerLite);
 			
-			var plate_boundaries = omnivore.kml('https://cors-anywhere.herokuapp.com/https://earthquake.usgs.gov/learn/plate-boundaries.kmz')
-				.on('ready',function(){
-					map.fitBounds(tectonic.getBounds());
-				})
-			.addTo(map);
+			var plate_boundaries = omnivore.kml('https://cors-anywhere.herokuapp.com/https://earthquake.usgs.gov/learn/plate-boundaries.kmz');
+			map2.addLayer(plate_boundaries);
 		</script>
 		
     </div>
