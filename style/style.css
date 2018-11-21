@@ -151,7 +151,7 @@ ol li
   border-top: 1px solid #3D3D3D;} 
 
 ul#menu
-{ float: right;
+{ float: left;
   margin: 0;}
 
 ul#menu li
@@ -225,9 +225,8 @@ ul#menu li a:hover
 
 #content
 { text-align: left;
-  width: 620px;
-  padding: 0 0 0 5px;
-  float: right;}
+  width: 880px;
+  padding: 0 0 0 5px;}
   
 #content ul
 { margin: 2px 0 22px 0px;}
