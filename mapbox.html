@@ -199,7 +199,7 @@
 			
 			map.addLayer(Stamen_TonerLite);
 			
-			var plate-boundaries = plate-boundaries.kmz
+			var plate-boundaries = plate-boundaries.kmz('https://cors-anywhere.herokuapp.com/https://earthquake.usgs.gov/learn/plate-boundaries.kmz')
 				.on('ready',function(){
 					map.fitBounds(tectonic.getBounds());
 				})
