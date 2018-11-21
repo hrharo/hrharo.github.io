@@ -200,7 +200,7 @@
 			
 			map.addLayer(Stamen_TonerLite);
 			
-			var plate_boundaries = omnivore.kmz('https://cors-anywhere.herokuapp.com/https://earthquake.usgs.gov/learn/plate-boundaries.kmz')
+			var plate_boundaries = omnivore.kml('https://cors-anywhere.herokuapp.com/https://earthquake.usgs.gov/learn/plate-boundaries.kmz')
 				.on('ready',function(){
 					map.fitBounds(tectonic.getBounds());
 				})
