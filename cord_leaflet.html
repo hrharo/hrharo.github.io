@@ -36,10 +36,11 @@
 			//add the basemap to the map
 			map.addLayer(OpenTopoMap);
 			//style for json polygons
-			function polystyle(feature){
+			//make style first before adding variable that style applies to
+			function style_16500(feature){
 				return{
 					fillColor: 'red',
-					weight: 2,
+					weight: 1,
 					opacity: 1,
 					color: 'red',
 					fillOpacity: 1
@@ -47,10 +48,11 @@
 			}
 			//add a local geojson file
 			//Thanks to https://www.igismap.com/add-load-geojson-file-point-polyline-polygon-map-leaflet-js/ for the tutorial
-			$.getJSON("ice_16500.json",function(data){
+			$.getJSON("../cord_json/ice_16500.json",function(data){
 			// add GeoJSON layer to the map once the file is loaded
 			var ice_16500 = L.geoJson(data ,{
-				style: polystyle
+				//name style associated with variable
+				style: style_16500
 			}).addTo(map);
 			
 			
