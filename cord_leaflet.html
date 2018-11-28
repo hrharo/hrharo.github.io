@@ -75,9 +75,7 @@
 				//add GeoJSON layer to the map once the file is loaded
 				var ice_16500 = L.geoJson(data , {
 				}).addTo(map);
-								
-				});
-
+				
 				map.fitBounds(ice_16500.geoJson());					
 				});
 		
