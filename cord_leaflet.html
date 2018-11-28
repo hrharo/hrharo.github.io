@@ -40,7 +40,7 @@
 			//Thanks to https://www.igismap.com/add-load-geojson-file-point-polyline-polygon-map-leaflet-js/ for the tutorial
 			$.getJSON("ice_16500.geoJson",function(data){
 			// add GeoJSON layer to the map once the file is loaded
-			var ice_16500 = L.ice_16500(data ,{
+			var ice_16500 = L.geoJson(data ,{
 			}).addTo(map);
 			});
 		</script>
