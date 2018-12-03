@@ -34,6 +34,7 @@
 			var map = new L.Map("map", {
 				center: new L.LatLng(58.3019, -134.4197),
 				zoom: 5
+				layers: [ice_16500, ice_16000, ice_15500, ice_15000, ice_14500, ice_14000, ice_13500, ice_13000, ice_12500, ice_12000, ice_11500, ice_11000]
 			});
 			//add the basemap to the map
 			map.addLayer(OpenTopoMap);
@@ -250,46 +251,10 @@
 				"12000 BCE": ice_12000,
 				"11500 BCE": ice_11500,
 				"11000 BCE": ice_11000
-			}
+			};
 
 			L.control.layers(overlays).addTo(map);
-
-			function getColorFor(str) { // java String#hashCode
-			        var hash = 0;
-			        for (var i = 0; i < str.length; i++) {
-			          hash = str.charCodeAt(i) + ((hash << 5) - hash);
-			        }
-			        var red = (hash >> 24) & 0xff;
-			        var grn = (hash >> 16) & 0xff;
-			        var blu = (hash >>  8) & 0xff;
-			        return 'rgb(' + red + ',' + grn + ',' + blu + ')';
-			      } 
-
-			function onLoadData(data){
-		        var timeline = L.timeline(data, {
-		          style: function(data){
-		            return {
-		              stroke: false,
-		              color: getColorFor(data.properties.name),
-		              fillOpacity: 0.5
-		            }
-		          },
-		          onEachFeature: function(feature, layer) {
-		            layer.bindTooltip(feature.properties.name);
-		          },
-		          waitToUpdateMap: true
-		        });
-
-		        var timelineControl = L.timelineSliderControl({
-		          formatOutput: function(date){
-		            return moment(date).format("YYYY-MM-DD");
-		          },
-		          enableKeyboardControls: true
-		        });
-		        timeline.addTo(map);
-		        timelineControl.addTo(map);
-		        timelineControl.addTimelines(timeline);
-		      }
+			
 
 		</script>
 
