@@ -250,9 +250,21 @@
 				}).addTo(map);
 			});
 			
-			
-
-			//L.control.layers(overlays).addTo(map);
+			var overlayMaps = {
+				"16500 BCE": ice_16500,
+				"16000 BCE": ice_16000,
+				"15500 BCE": ice_15500,
+				"15000 BCE": ice_15000,
+				"14500 BCE": ice_14500,
+				"14000 BCE": ice_14000,
+				"13500 BCE": ice_13500,
+				"13000 BCE": ice_13000,
+				"12500 BCE": ice_12500,
+				"12000 BCE": ice_12000,
+				"11500 BCE": ice_11500,
+				"11000 BCE": ice_11000
+			}
+			L.control.layers(overlays).addTo(map);
 			
 
 		</script>
