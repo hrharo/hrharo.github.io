@@ -282,7 +282,25 @@
 			//}
 			//L.control.layers(overlays).addTo(map);
 			
+			function onLoadData(data){
+				var timeline = L.timeline(data, {
+				  },
+				  onEachFeature: function(feature, layer) {
+					layer.bindTooltip(feature.properties.name);
+				  },
+				  waitToUpdateMap: true
+				});
 
+				var timelineControl = L.timelineSliderControl({
+				  formatOutput: function(name){
+					return moment(name).format("YYYYYY");
+				  },
+				  enableKeyboardControls: true
+				});
+				timeline.addTo(map);
+				timelineControl.addTo(map);
+				timelineControl.addTimelines(timeline);
+			  }
 		</script>
 
 	</body>
