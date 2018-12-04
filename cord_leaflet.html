@@ -29,9 +29,25 @@
 				attribution: 'Map data: &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
 			});
 			//make the map
+			var overlays = {
+				"16500 BCE": ice_16500,
+				"16000 BCE": ice_16000,
+				"15500 BCE": ice_15500,
+				"15000 BCE": ice_15000,
+				"14500 BCE": ice_14500,
+				"14000 BCE": ice_14000,
+				"13500 BCE": ice_13500,
+				"13000 BCE": ice_13000,
+				"12500 BCE": ice_12500,
+				"12000 BCE": ice_12000,
+				"11500 BCE": ice_11500,
+				"11000 BCE": ice_11000
+			};
+
 			var map = new L.Map("map", {
 				center: new L.LatLng(58.3019, -134.4197),
 				zoom: 5
+				layers: [ice_16500, ice_16000, ice_15500, ice_15000, ice_14500, ice_14000, ice_13500, ice_13000, ice_12500, ice_12000, ice_11500, ice_11000]
 			});
 			//add the basemap to the map
 			map.addLayer(OpenTopoMap);
@@ -235,20 +251,7 @@
 				}).addTo(map);
 			});
 			
-			var overlays = {
-				"16500 BCE": ice_16500,
-				"16000 BCE": ice_16000,
-				"15500 BCE": ice_15500,
-				"15000 BCE": ice_15000,
-				"14500 BCE": ice_14500,
-				"14000 BCE": ice_14000,
-				"13500 BCE": ice_13500,
-				"13000 BCE": ice_13000,
-				"12500 BCE": ice_12500,
-				"12000 BCE": ice_12000,
-				"11500 BCE": ice_11500,
-				"11000 BCE": ice_11000
-			};
+			
 
 			L.control.layers(overlays).addTo(map);
 			
