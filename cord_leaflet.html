@@ -48,8 +48,12 @@
 				center: new L.LatLng(58.3019, -134.4197),
 				zoom: 5
 			});
+			
+			var controllayers = L.control.layers().addTo(map);
 			//add the basemap to the map
 			map.addLayer(OpenTopoMap);
+			
+			//ice layers
 			//style for json polygons
 			//make style first before adding variable that style applies to
 			function style_16500(feature){
@@ -69,6 +73,7 @@
 				//name style associated with variable
 				style: style_16500
 				}).addTo(map);
+				controlLayers.addOverlay(ice_16500, '16500 BCE');
 			});
 			//style for json polygons
 			//make style first before adding variable that style applies to
@@ -88,6 +93,7 @@
 				//name style associated with variable
 				style: style_16000
 				}).addTo(map);
+				controlLayers.addOverlay(ice_16000, '16000 BCE');
 			});
 
 			function style_15500(feature){
@@ -104,6 +110,7 @@
 				//name style associated with variable
 				style: style_15500
 				}).addTo(map);
+				controlLayers.addOverlay(ice_15500, '15500 BCE');
 			});
 
 			function style_15000(feature){
@@ -120,6 +127,7 @@
 				//name style associated with variable
 				style: style_15000
 				}).addTo(map);
+				controlLayers.addOverlay(ice_15000, '15000 BCE');
 			});
 
 			function style_14500(feature){
@@ -136,6 +144,7 @@
 				//name style associated with variable
 				style: style_14500
 				}).addTo(map);
+				controlLayers.addOverlay(ice_14500, '14500 BCE');
 			});
 
 			function style_14000(feature){
@@ -152,6 +161,7 @@
 				//name style associated with variable
 				style: style_14000
 				}).addTo(map);
+				controlLayers.addOverlay(ice_14000, '14000 BCE');
 			});
 
 			function style_13500(feature){
@@ -168,6 +178,7 @@
 				//name style associated with variable
 				style: style_13500
 				}).addTo(map);
+				controlLayers.addOverlay(ice_13500, '13500 BCE');
 			});
 
 			function style_13000(feature){
@@ -184,6 +195,7 @@
 				//name style associated with variable
 				style: style_13000
 				}).addTo(map);
+				controlLayers.addOverlay(ice_13000, '1300 BCE');
 			});
 
 			function style_12500(feature){
@@ -200,6 +212,7 @@
 				//name style associated with variable
 				style: style_12500
 				}).addTo(map);
+				controlLayers.addOverlay(ice_12500, '12500 BCE');
 			});
 
 			function style_12000(feature){
@@ -216,6 +229,7 @@
 				//name style associated with variable
 				style: style_12000
 				}).addTo(map);
+				controlLayers.addOverlay(ice_12000, '12000 BCE');
 			});
 
 			function style_11500(feature){
@@ -232,6 +246,7 @@
 				//name style associated with variable
 				style: style_11500
 				}).addTo(map);
+				controlLayers.addOverlay(ice_11500, '11500 BCE');
 			});
 			
 			function style_11000(feature){
@@ -248,23 +263,24 @@
 				//name style associated with variable
 				style: style_11000
 				}).addTo(map);
+				controlLayers.addOverlay(ice_11000, '11000 BCE');
 			});
 			
-			var overlayMaps = {
-				"16500 BCE": ice_16500,
-				"16000 BCE": ice_16000,
-				"15500 BCE": ice_15500,
-				"15000 BCE": ice_15000,
-				"14500 BCE": ice_14500,
-				"14000 BCE": ice_14000,
-				"13500 BCE": ice_13500,
-				"13000 BCE": ice_13000,
-				"12500 BCE": ice_12500,
-				"12000 BCE": ice_12000,
-				"11500 BCE": ice_11500,
-				"11000 BCE": ice_11000
-			}
-			L.control.layers(overlays).addTo(map);
+			//var overlayMaps = {
+				//"16500 BCE": ice_16500,
+				//"16000 BCE": ice_16000,
+				//"15500 BCE": ice_15500,
+				//"15000 BCE": ice_15000,
+				//"14500 BCE": ice_14500,
+				//"14000 BCE": ice_14000,
+				//"13500 BCE": ice_13500,
+				//"13000 BCE": ice_13000,
+				//"12500 BCE": ice_12500,
+				//"12000 BCE": ice_12000,
+				//"11500 BCE": ice_11500,
+				//"11000 BCE": ice_11000
+			//}
+			//L.control.layers(overlays).addTo(map);
 			
 
 		</script>
