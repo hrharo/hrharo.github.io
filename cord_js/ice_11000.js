@@ -1,4 +1,4 @@
-var ice_11000=
+var ice_11000 =
 {
 "type": "FeatureCollection",
 "name": "11000",
