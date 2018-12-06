@@ -20,6 +20,7 @@
 	<body>
 		<!-- the map element -->
 		<div id="map"></div>
+		<button onclick = 'reorder()'>REORDER</button>
 		<!-- the script for my map -->
 		<script>
 			//Basemap from https://leaflet-extras.github.io/leaflet-providers/preview/ 
@@ -254,7 +255,18 @@
 
 			//create function to reorder layers
 			function reorder(){
-			
+				ice_16500.bringtoFront();
+				ice_16000.bringtoFront();
+				ice_15500.bringtoFront();
+				ice_15000.bringtoFront();
+				ice_14500.bringtoFront();
+				ice_14000.bringtoFront();
+				ice_13500.bringtoFront();
+				ice_13000.bringtoFront();
+				ice_12500.bringtoFront();
+				ice_12000.bringtoFront();
+				ice_11500.bringtoFront();
+				ice_11000.bringtoFront();
 			}
 		</script>
 
