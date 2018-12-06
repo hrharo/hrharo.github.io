@@ -36,6 +36,21 @@
 			//add the basemap to the map
 			map.addLayer(OpenTopoMap);
 			
+			//rcreate leist
+			var ice_16500;
+			var ice_16000;
+			var ice_15500;
+			var ice_15000;
+			var ice_14500;
+			var ice_14000;
+			var ice_13500;
+			var ice_13000;
+			var ice_12500;
+			var ice_12000;
+			var ice_11500;
+			var ice_11000;
+
+
 			//ice layers
 			//style for json polygons
 			//make style first before adding variable that style applies to
@@ -52,7 +67,7 @@
 			//Thanks to https://www.igismap.com/add-load-geojson-file-point-polyline-polygon-map-leaflet-js/ for the tutorial
 			$.getJSON("../cord_json/ice_16500.json",function(data){
 			// add GeoJSON layer to the map once the file is loaded
-			var ice_16500 = L.geoJson(data ,{
+			ice_16500 = L.geoJson(data ,{
 				//name style associated with variable
 				style: style_16500
 				}).addTo(map);
@@ -71,7 +86,7 @@
 			}
 			$.getJSON("../cord_json/ice_16000.json",function(data){
 			// add GeoJSON layer to the map once the file is loaded			
-			var ice_16000 = L.geoJson(data ,{
+			ice_16000 = L.geoJson(data ,{
 				//name style associated with variable
 				style: style_16000
 				}).addTo(map);
@@ -87,7 +102,7 @@
 				};
 			}
 			$.getJSON("../cord_json/ice_15500.json",function(data){			
-			var ice_15500 = L.geoJson(data ,{
+			ice_15500 = L.geoJson(data ,{
 				//name style associated with variable
 				style: style_15500
 				}).addTo(map);
@@ -103,7 +118,7 @@
 				};
 			}
 			$.getJSON("../cord_json/ice_15000.json",function(data){			
-			var ice_15000 = L.geoJson(data ,{
+			ice_15000 = L.geoJson(data ,{
 				//name style associated with variable
 				style: style_15000
 				}).addTo(map);
@@ -119,7 +134,7 @@
 				};
 			}
 			$.getJSON("../cord_json/ice_14500.json",function(data){			
-			var ice_14500 = L.geoJson(data ,{
+			ice_14500 = L.geoJson(data ,{
 				//name style associated with variable
 				style: style_14500
 				}).addTo(map);
@@ -135,7 +150,7 @@
 				};
 			}
 			$.getJSON("../cord_json/ice_14000.json",function(data){			
-			var ice_14000 = L.geoJson(data ,{
+			ice_14000 = L.geoJson(data ,{
 				//name style associated with variable
 				style: style_14000
 				}).addTo(map);
@@ -151,7 +166,7 @@
 				};
 			}
 			$.getJSON("../cord_json/ice_13500.json",function(data){			
-			var ice_13500 = L.geoJson(data ,{
+			ice_13500 = L.geoJson(data ,{
 				//name style associated with variable
 				style: style_13500
 				}).addTo(map);
@@ -167,7 +182,7 @@
 				};
 			}
 			$.getJSON("../cord_json/ice_13000.json",function(data){			
-			var ice_13000 = L.geoJson(data ,{
+			ice_13000 = L.geoJson(data ,{
 				//name style associated with variable
 				style: style_13000
 				}).addTo(map);
@@ -183,7 +198,7 @@
 				};
 			}
 			$.getJSON("../cord_json/ice_12500.json",function(data){			
-			var ice_12500 = L.geoJson(data ,{
+			ice_12500 = L.geoJson(data ,{
 				//name style associated with variable
 				style: style_12500
 				}).addTo(map);
@@ -199,7 +214,7 @@
 				};
 			}
 			$.getJSON("../cord_json/ice_12000.json",function(data){			
-			var ice_12000 = L.geoJson(data ,{
+			ice_12000 = L.geoJson(data ,{
 				//name style associated with variable
 				style: style_12000
 				}).addTo(map);
@@ -215,7 +230,7 @@
 				};
 			}
 			$.getJSON("../cord_json/ice_11500.json",function(data){			
-			var ice_11500 = L.geoJson(data ,{
+			ice_11500 = L.geoJson(data ,{
 				//name style associated with variable
 				style: style_11500
 				}).addTo(map);
@@ -231,12 +246,16 @@
 				};
 			}
 			$.getJSON("../cord_json/ice_11000.json",function(data){			
-			var ice_11000 = L.geoJson(data ,{
+			ice_11000 = L.geoJson(data ,{
 				//name style associated with variable
 				style: style_11000
 				}).addTo(map);
 			});
 
+			//create function to reorder layers
+			function reorder(){
+			
+			}
 		</script>
 
 	</body>
