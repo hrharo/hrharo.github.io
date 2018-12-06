@@ -63,6 +63,45 @@
 			var ice_11500;
 			var ice_11000;
 
+//create function to reorder layers
+			function reorder(){
+				if (map.hasLayer(ice_16500)){	
+					ice_16500.bringToFront();
+				}
+				if (map.hasLayer(ice_16000)){	
+					ice_16000.bringToFront();
+				}
+				if (map.hasLayer(ice_15500)){	
+					ice_15500.bringToFront();
+				}
+				if (map.hasLayer(ice_15000)){	
+					ice_15000.bringToFront();
+				}
+				if (map.hasLayer(ice_14500)){	
+					ice_14500.bringToFront();
+				}
+				if (map.hasLayer(ice_14000)){	
+					ice_14000.bringToFront();
+				}
+				if (map.hasLayer(ice_13500)){	
+					ice_13500.bringToFront();
+				}
+				if (map.hasLayer(ice_13000)){	
+					ice_13000.bringToFront();
+				}
+				if (map.hasLayer(ice_12500)){	
+					ice_12500.bringToFront();
+				}
+				if (map.hasLayer(ice_12000)){	
+					ice_12000.bringToFront();
+				}
+				if (map.hasLayer(ice_11500)){	
+					ice_11500.bringToFront();
+				}
+				if (map.hasLayer(ice_11000)){	
+					ice_11000.bringToFront();
+				}
+			}
 
 			//ice layers
 			//style for json polygons
@@ -87,6 +126,7 @@
 			});
 			//style for json polygons
 			//make style first before adding variable that style applies to
+
 
 			function style_16000(feature){
 				return{
@@ -263,47 +303,9 @@
 				//name style associated with variable
 				style: style_11000
 				}).addTo(map);
+				reorder();
 			});
 
-			//create function to reorder layers
-			function reorder(){
-				if (map.hasLayer(ice_16500)){	
-					ice_16500.bringToFront();
-				}
-				if (map.hasLayer(ice_16000)){	
-					ice_16000.bringToFront();
-				}
-				if (map.hasLayer(ice_15500)){	
-					ice_15500.bringToFront();
-				}
-				if (map.hasLayer(ice_15000)){	
-					ice_15000.bringToFront();
-				}
-				if (map.hasLayer(ice_14500)){	
-					ice_14500.bringToFront();
-				}
-				if (map.hasLayer(ice_14000)){	
-					ice_14000.bringToFront();
-				}
-				if (map.hasLayer(ice_13500)){	
-					ice_13500.bringToFront();
-				}
-				if (map.hasLayer(ice_13000)){	
-					ice_13000.bringToFront();
-				}
-				if (map.hasLayer(ice_12500)){	
-					ice_12500.bringToFront();
-				}
-				if (map.hasLayer(ice_12000)){	
-					ice_12000.bringToFront();
-				}
-				if (map.hasLayer(ice_11500)){	
-					ice_11500.bringToFront();
-				}
-				if (map.hasLayer(ice_11000)){	
-					ice_11000.bringToFront();
-				}
-			}
 
 			function togglelayers(current){
 				if (map.hasLayer(current)){
@@ -315,7 +317,6 @@
 				reorder();
 			}
 
-			reorder();
 		</script>
 
 	</body>
