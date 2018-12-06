@@ -19,6 +19,7 @@
 	
 	<body>
 		<!-- the map element -->
+		<button onclick = 'togglelayers(ice_11000)'>11000</button>
 		<div id="map"></div>
 		<button onclick = 'reorder()'>REORDER</button>
 		<!-- the script for my map -->
@@ -267,6 +268,16 @@
 				ice_12000.bringToFront();
 				ice_11500.bringToFront();
 				ice_11000.bringToFront();
+			}
+
+			function togglelayers(current){
+				if (map.hasLayer(current)){
+					map.removeLayer(current);
+				}
+				else {
+					map.addLayer(current);
+				}
+				reorder();
 			}
 		</script>
 
