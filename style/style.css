@@ -223,7 +223,7 @@ ul#menu li a:hover
 .sidebar ul
 { margin: 0;}
 
-.button {
+.button onclick {
   background-color: #5E4238;
   border: none;
   color: white;
@@ -236,7 +236,7 @@ ul#menu li a:hover
   cursor: pointer;
 }
 
-.button:hover {
+.button onclick:hover {
 background-color:#5E4238;
 color: #B48A7C;
 }
