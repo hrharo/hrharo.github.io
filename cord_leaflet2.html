@@ -16,9 +16,6 @@
 
 			#map {height: 80vh; background-color: grey;}
 			.button {
-				position: absolute;
-				top: 50%;
-				left: 50%;
 				background-color: #5E4238;
 				border: none;
 				color: white;
@@ -43,7 +40,9 @@
 	
 	<body>
 		<!-- the map element -->
-		<button class="button" onclick = 'togglelayers(ice_11000)'>11000</button>
+
+		<div id="map">
+					<button class="button" onclick = 'togglelayers(ice_11000)'>11000</button>
 		<button class="button" onclick = 'togglelayers(ice_11500)'>11500</button>
 		<button class="button" onclick = 'togglelayers(ice_12000)'>12000</button>
 		<button class="button" onclick = 'togglelayers(ice_12500)'>12500</button>
@@ -55,7 +54,7 @@
 		<button class="button" onclick = 'togglelayers(ice_15500)'>15500</button>
 		<button class="button" onclick = 'togglelayers(ice_16000)'>16000</button>
 		<button class="button" onclick = 'togglelayers(ice_16500)'>16500</button>
-		<div id="map"></div>
+		</div>
 		<button onclick = 'reorder()'>REORDER</button>
 		<!-- the script for my map -->
 		<script>
