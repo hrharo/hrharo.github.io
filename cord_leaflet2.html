@@ -14,7 +14,24 @@
 		<!-- A style for the map element -->
 		<style>
 
-			#map {height: 80vh; background-color: grey;}
+			#map-wrapper {
+			    width: 100%;
+			    height: 500px;
+			    position: relative;
+			    border: 1px solid black;
+			}
+
+			#map {
+			    height: 80vh;
+			    background-color: grey;
+			}
+
+			#button-wrapper {
+			    position: absolute;
+			    bottom: 10px;
+			    width: 100%;
+			    border: 1px;
+			}
 			.button {
 				background-color: #5E4238;
 				border: none;
@@ -35,26 +52,33 @@
 			.button:hover {
 			  background-color: #B48A7C;
 			}
+
+			
 		</style>
 	</head>
 	
 	<body>
-		<button class="button" onclick = 'togglelayers(ice_11000)'>11000</button>
-		<button class="button" onclick = 'togglelayers(ice_11500)'>11500</button>
-		<button class="button" onclick = 'togglelayers(ice_12000)'>12000</button>
-		<button class="button" onclick = 'togglelayers(ice_12500)'>12500</button>
-		<button class="button" onclick = 'togglelayers(ice_13000)'>13000</button>
-		<button class="button" onclick = 'togglelayers(ice_13500)'>13500</button>
-		<button class="button" onclick = 'togglelayers(ice_14000)'>14000</button>
-		<button class="button" onclick = 'togglelayers(ice_14500)'>14500</button>
-		<button class="button" onclick = 'togglelayers(ice_15000)'>15000</button>
-		<button class="button" onclick = 'togglelayers(ice_15500)'>15500</button>
-		<button class="button" onclick = 'togglelayers(ice_16000)'>16000</button>
-		<button class="button" onclick = 'togglelayers(ice_16500)'>16500</button>
+	<!--help from: https://stackoverflow.com/questions/17942889/how-to-put-buttons-on-the-leaflet-map -->
+		
 		<!-- the map element -->
-
+	<div id="map-wrapper">
 		<div id="map"></div>
-		<button onclick = 'reorder()'>REORDER</button>
+		<div id="button-wrapper">
+			<button class="button" onclick = 'togglelayers(ice_11000)'>11000</button>
+			<button class="button" onclick = 'togglelayers(ice_11500)'>11500</button>
+			<button class="button" onclick = 'togglelayers(ice_12000)'>12000</button>
+			<button class="button" onclick = 'togglelayers(ice_12500)'>12500</button>
+			<button class="button" onclick = 'togglelayers(ice_13000)'>13000</button>
+			<button class="button" onclick = 'togglelayers(ice_13500)'>13500</button>
+			<button class="button" onclick = 'togglelayers(ice_14000)'>14000</button>
+			<button class="button" onclick = 'togglelayers(ice_14500)'>14500</button>
+			<button class="button" onclick = 'togglelayers(ice_15000)'>15000</button>
+			<button class="button" onclick = 'togglelayers(ice_15500)'>15500</button>
+			<button class="button" onclick = 'togglelayers(ice_16000)'>16000</button>
+			<button class="button" onclick = 'togglelayers(ice_16500)'>16500</button>
+			<button onclick = 'reorder()'>REORDER</button>
+		</div>
+	</div>
 		<!-- the script for my map -->
 		<script>
 			//Basemap from https://leaflet-extras.github.io/leaflet-providers/preview/ 
