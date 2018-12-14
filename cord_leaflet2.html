@@ -15,7 +15,7 @@
 		<style>
 
 			#map {height: 80vh; background-color: grey;}
-			.button {
+			.btn-group .button {
 				background-color: #5E4238;
 				border: none;
 				color: white;
@@ -27,28 +27,33 @@
 				margin: 4px 2px;
 				cursor: pointer;
 			}
+			
+			.btn-group .button:not(:last-child) {
+			  border-right: none; /* Prevent double borders */
+			}
 
-			.#button:hover {
-				background-color:#5E4238;
-				color: #B48A7C;
+			.btn-group .button:hover {
+			  background-color: #3e8e41;
 			}
 		</style>
 	</head>
 	
 	<body>
 		<!-- the map element -->
-		<button onclick = 'togglelayers(ice_11000)'>11000</button>
-		<button onclick = 'togglelayers(ice_11500)'>11500</button>
-		<button onclick = 'togglelayers(ice_12000)'>12000</button>
-		<button onclick = 'togglelayers(ice_12500)'>12500</button>
-		<button onclick = 'togglelayers(ice_13000)'>13000</button>
-		<button onclick = 'togglelayers(ice_13500)'>13500</button>
-		<button onclick = 'togglelayers(ice_14000)'>14000</button>
-		<button onclick = 'togglelayers(ice_14500)'>14500</button>
-		<button onclick = 'togglelayers(ice_15000)'>15000</button>
-		<button onclick = 'togglelayers(ice_15500)'>15500</button>
-		<button onclick = 'togglelayers(ice_16000)'>16000</button>
-		<button onclick = 'togglelayers(ice_16500)'>16500</button>
+		<div class="btn-group">
+		<button class="button" onclick = 'togglelayers(ice_11000)'>11000</button>
+		<button class="button" onclick = 'togglelayers(ice_11500)'>11500</button>
+		<button class="button" onclick = 'togglelayers(ice_12000)'>12000</button>
+		<button class="button" onclick = 'togglelayers(ice_12500)'>12500</button>
+		<button class="button" onclick = 'togglelayers(ice_13000)'>13000</button>
+		<button class="button" onclick = 'togglelayers(ice_13500)'>13500</button>
+		<button class="button" onclick = 'togglelayers(ice_14000)'>14000</button>
+		<button class="button" onclick = 'togglelayers(ice_14500)'>14500</button>
+		<button class="button" onclick = 'togglelayers(ice_15000)'>15000</button>
+		<button class="button" onclick = 'togglelayers(ice_15500)'>15500</button>
+		<button class="button" onclick = 'togglelayers(ice_16000)'>16000</button>
+		<button class="button" onclick = 'togglelayers(ice_16500)'>16500</button>
+		</div>
 		<div id="map"></div>
 		<button onclick = 'reorder()'>REORDER</button>
 		<!-- the script for my map -->
