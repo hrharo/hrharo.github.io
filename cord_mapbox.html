@@ -69,9 +69,71 @@ center: [-121.727388, 53.691177],
 zoom: 3.3
 });
 
-var toggleableLayerIds = [ 'ice_16500', 'ice_15500', 'ice_15000', 'ice_14500', 'ice_14000', 'ice_13500', 'ice_13000', 'ice_12500', 'ice_12000', 'ice_11500', 'ice_11000' ];
+//var toggleableLayerIds = [ 'ice_16500', 'ice_15500', 'ice_15000', 'ice_14500', 'ice_14000', 'ice_13500', 'ice_13000', 'ice_12500', 'ice_12000', 'ice_11500', 'ice_11000' ];
 
-for (var i = 0; i < toggleableLayerIds.length; i++) {
+map.addSource('ice_16500', {
+  type: 'geojson',
+  data: 'https://github.com/hrharo/hrharo.github.io/blob/master/cord_json/ice_16500.json'
+});
+
+map.addSource('ice_16000', {
+  type: 'geojson',
+  data: 'https://github.com/hrharo/hrharo.github.io/blob/master/cord_json/ice_16000.json'
+});
+
+map.addSource('ice_15500', {
+  type: 'geojson',
+  data: 'https://github.com/hrharo/hrharo.github.io/blob/master/cord_json/ice_15500.json'
+});
+
+map.addSource('ice_15000', {
+  type: 'geojson',
+  data: 'https://github.com/hrharo/hrharo.github.io/blob/master/cord_json/ice_15000.json'
+});
+
+map.addSource('ice_14500', {
+  type: 'geojson',
+  data: 'https://github.com/hrharo/hrharo.github.io/blob/master/cord_json/ice_14500.json'
+});
+
+map.addSource('ice_14000', {
+  type: 'geojson',
+  data: 'https://github.com/hrharo/hrharo.github.io/blob/master/cord_json/ice_14000.json'
+});
+
+map.addSource('ice_13500', {
+  type: 'geojson',
+  data: 'https://github.com/hrharo/hrharo.github.io/blob/master/cord_json/ice_13500.json'
+});
+
+map.addSource('ice_13000', {
+  type: 'geojson',
+  data: 'https://github.com/hrharo/hrharo.github.io/blob/master/cord_json/ice_13000.json'
+});
+
+map.addSource('ice_12500', {
+  type: 'geojson',
+  data: 'https://github.com/hrharo/hrharo.github.io/blob/master/cord_json/ice_12500.json'
+});
+
+map.addSource('ice_12000', {
+  type: 'geojson',
+  data: 'https://github.com/hrharo/hrharo.github.io/blob/master/cord_json/ice_12000.json'
+});
+
+map.addSource('ice_11500', {
+  type: 'geojson',
+  data: 'https://github.com/hrharo/hrharo.github.io/blob/master/cord_json/ice_11500.json'
+});
+
+map.addSource('ice_11000', {
+  type: 'geojson',
+  data: 'https://github.com/hrharo/hrharo.github.io/blob/master/cord_json/ice_11000.json'
+});
+
+
+
+/*for (var i = 0; i < toggleableLayerIds.length; i++) {
     var id = toggleableLayerIds[i];
 
     var link = document.createElement('a');
@@ -97,7 +159,7 @@ for (var i = 0; i < toggleableLayerIds.length; i++) {
 
     var layers = document.getElementById('menu');
     layers.appendChild(link);
-}
+}*/
 </script>
  
 </body>
