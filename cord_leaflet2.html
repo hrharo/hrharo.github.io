@@ -15,7 +15,7 @@
 		<style>
 
 			#map {height: 80vh; background-color: grey;}
-			.btn-group .button {
+			.button {
 				background-color: #5E4238;
 				border: none;
 				color: white;
@@ -28,19 +28,18 @@
 				cursor: pointer;
 			}
 			
-			.btn-group .button:not(:last-child) {
+			.button:not(:last-child) {
 			  border-right: none; /* Prevent double borders */
 			}
 
-			.btn-group .button:hover {
-			  background-color: #3e8e41;
+			.button:hover {
+			  background-color: #B48A7C;
 			}
 		</style>
 	</head>
 	
 	<body>
 		<!-- the map element -->
-		<div class="btn-group">
 		<button class="button" onclick = 'togglelayers(ice_11000)'>11000</button>
 		<button class="button" onclick = 'togglelayers(ice_11500)'>11500</button>
 		<button class="button" onclick = 'togglelayers(ice_12000)'>12000</button>
@@ -53,7 +52,6 @@
 		<button class="button" onclick = 'togglelayers(ice_15500)'>15500</button>
 		<button class="button" onclick = 'togglelayers(ice_16000)'>16000</button>
 		<button class="button" onclick = 'togglelayers(ice_16500)'>16500</button>
-		</div>
 		<div id="map"></div>
 		<button onclick = 'reorder()'>REORDER</button>
 		<!-- the script for my map -->
