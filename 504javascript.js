@@ -8,17 +8,18 @@ var darkbase = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png
   attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
     '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
     'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-  id: 'mapbox.satellite', // experiment with changing this to mapbox.light, mapbox.dark, mapbox.satellite, etc.
-  accessToken: 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw' //this is a generic access token, but when you deploy projects of your own, you must get a unique key that is tied to your Mapbox account
+  id: 'mapbox.dark', // experiment with changing this to mapbox.light, mapbox.dark, mapbox.satellite, etc.
+  accessToken: 'pk.eyJ1IjoiaGFyb2giLCJhIjoiY2pvNmpneXhyMGx2ZTNwcXFzYzFzdm52dCJ9.zTx9hlyiDL0--qvBqDUuRw' //this is a generic access token, but when you deploy projects of your own, you must get a unique key that is tied to your Mapbox account
+}),
 	lightbase = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
   attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
     '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
     'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-  id: 'mapbox.satellite', // experiment with changing this to mapbox.light, mapbox.dark, mapbox.satellite, etc.
-  accessToken: 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw' //this is a generic access token, but when you deploy projects of your own, you must get a unique key that is tied to your Mapbox account
-})
+  id: 'mapbox.light', // experiment with changing this to mapbox.light, mapbox.dark, mapbox.satellite, etc.
+  accessToken: 'pk.eyJ1IjoiaGFyb2giLCJhIjoiY2pvNmpneXhyMGx2ZTNwcXFzYzFzdm52dCJ9.zTx9hlyiDL0--qvBqDUuRw' //this is a generic access token, but when you deploy projects of your own, you must get a unique key that is tied to your Mapbox account
+});
 
-var map = L.map('map' {
+var map = L.map('map', {
 	  maxZoom: 18,
 	  layers: [darkbase, lightbase]
 }).fitWorld(); //Here we initialize the map in the "map" div defined in the html body. Below, we call in Mapbox tiles and use the options to set the max zoom to 18, include our attribution, specify that the tiles set we want is mapbox.streets, and provide the access token for Mapbox's API
