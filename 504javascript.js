@@ -31,13 +31,23 @@ var baseMaps = {
 
 L.control.layers(baseMaps).addTo(map);
 
+//Button Locator
+function getLocation(){
+  map.locate({
+  setView: true, //this option centers the map on location and zooms
+  maxZoom: 16, // this option prevents the map from zooming further than 16, maintaining some spatial context even if the accuracy of the location reading allows for closer zoom
+  timeout: 20000, // this option specifies when the browser will stop attempting to get a fix on the device's location. Units are miliseconds. Change this to 5000 and test the change. Before you submit, change this to 15000.
+  watch: false, // you can set this option from false to true to track a user's movement over time instead of just once. For our purposes, however, leave this option as is.}
+});
+}
+
+
 //the below JS code takes advantage of the Geolocate API as it is incorporated in the Leaflet JS API with the locate method
 function onLocationFound(e) { //this function does three things if the location is found: it defines a radius variable, adds a popup to the map, and adds a circle to the map.
 
   var radius = e.accuracy / 2; //this defines a variable radius as the accuracy value returned by the locate method divided by 2. It is divided by 2 because the accuracy value is the sum of the estimated accuracy of the latitude plus the estimated accuracy of the longitude. The unit is meters.
 
-  var marker = L.marker(e.latlng).addTo(map)
-    .bindPopup("You are within " + radius + " meters of this point.<br>Coordinates: " + e.latlng).openPopup()
+  L.marker(e.latlng).addTo(map).bindPopup("You are within " + radius + " meters of this point.<br>Coordinates: " + e.latlng).openPopup()
   //this adds a Leaflet popup to the map at the lat and long returned by the locate function. The text of the popup is defined here as well. Please change this text to specify what unit the radius is reported in.
 
   //L.circle(e.latlng, radius).addTo(map); // this adds a Leaflet circle to the map at the lat and long returned by the locate function. Its radius is set to the var radius defined above.
@@ -67,3 +77,8 @@ map.locate({
   timeout: 20000, // this option specifies when the browser will stop attempting to get a fix on the device's location. Units are miliseconds. Change this to 5000 and test the change. Before you submit, change this to 15000.
   watch: false, // you can set this option from false to true to track a user's movement over time instead of just once. For our purposes, however, leave this option as is.
 });
+
+//Auto time
+//var d = new Date();
+//var n = d.getHours();
+//if (n <)
