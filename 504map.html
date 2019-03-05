@@ -16,7 +16,26 @@
 
 <!--additonal help with buttons from: https://stackoverflow.com/questions/17942889/how-to-put-buttons-on-the-leaflet-map-->
 <button id="locate-position" onclick="getLocation()">Get Location</button>
+
+<div class="span9" style="height:100%">
+    <div id="map-wrapper">
+        <div id="map"></div>
+        <div id="button-wrapper">
+            <input type="button" id="locate-position" value="Get Location" onclick="getLocation()" class=".locate-position" />
+            <input type="button" id="Btn2" value="Btn2" class="btnStyle span3" /> 
+         </div> 
+    </div>
+    <!--<span id="studentsCount" class="lblStyle span3"> Ikke rutesat: </span>-->
+</div>
+
+
+
 <div id="map"></div>
+<div id="button-wrapper">
+            <input type="button" id="Btn1" value="Btn1" class="btnStyle span3" />
+            <input type="button" id="Btn2" value="Btn2" class="btnStyle span3" /> 
+            <input type="button" id="Btn3" value="Btn3" class="btnStyle span3" />
+         </div> 
 <script src="504javascript.js"></script>
 
 </body>
