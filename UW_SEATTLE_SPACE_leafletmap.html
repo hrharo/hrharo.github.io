@@ -23,25 +23,21 @@
 
 <script>
 
-  var mymap = L.map('mapid').setView([47.655548, -122.303200], 15);
+	var mymap = L.map('mapid').setView([47.655548, -122.303200], 15);
 
-  var Stamen_TonerBackground = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-background/{z}/{x}/{y}{r}.{ext}', {
-  attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-  subdomains: 'abcd',
-  minZoom: 0,
-  maxZoom: 20,
-  ext: 'png'
-  }).addTo(mymap);
+	var Stamen_TonerBackground = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-background/{z}/{x}/{y}{r}.{ext}', {
+	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+	subdomains: 'abcd',
+	minZoom: 0,
+	maxZoom: 20,
+	ext: 'png'
+	}).addTo(mymap);
 
-  $.getJSON('UW_SEATTLE_LANDSCAPE_GREENSPACE.geojson',function(data){
-        //add GeoJSON layer to the map once the file is loaded
-        var UW_SEATTLE_LANDSCAPE_GREENSPACE = L.geoJson(data , {
-          onEachFeature: function(feature, featureLayer) {
-            featureLayer.bindPopup(feature.properties.NAME);
-          }
-        }).addTo(mymap);
-                
-        });
+	// loading GeoJSON file - Here my html and usa_adm.geojson file resides in same folder
+	$.getJSON('UW_SEATTLE_LANDSCAPE_GREENSPACE.geojson',function(data){
+	// L.geoJson function is used to parse geojson file and load on to map
+	L.geoJson(data).addTo(newMap);
+	});
 
 </script>
 
