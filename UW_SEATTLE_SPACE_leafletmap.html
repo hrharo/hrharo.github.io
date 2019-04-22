@@ -33,7 +33,7 @@
   ext: 'png'
   }).addTo(mymap);
 
-  $.getJSON('UW_SEATTLE_LANDSCAPE_GREENSPACE.json',function(data){
+  $.getJSON('UW_SEATTLE_LANDSCAPE_GREENSPACE.geojson',function(data){
         //add GeoJSON layer to the map once the file is loaded
         var UW_SEATTLE_LANDSCAPE_GREENSPACE = L.geoJson(data , {
           onEachFeature: function(feature, featureLayer) {
