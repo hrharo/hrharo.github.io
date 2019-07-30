@@ -45,7 +45,7 @@ section:last-child {
 <div id='map'></div>
 <div id='features'>
     <section id='Intro' class='active'>
-        <h3>18,000 Years BCE</h3>
+        <h3>Ice Age Deglaciation in the Pacific Northwest</h3>
         <p></p>
     </section>
     <section id='18000' class='active'>
@@ -182,9 +182,21 @@ var map = new mapboxgl.Map({
 });
 
 map.on('load', function (){
-  map.addSource('some id', {
+  map.addSource('ice_18000', {
   type: 'geojson',
-  data: 'https://hrharo.github.io/capstone/data/ice_18000.json'
+  data: 'https://raw.githubusercontent.com/hrharo/hrharo.github.io/master/capstone/data/ice_18000.json'
+  });
+  map.addLayer({
+    'id':'ice_18000',
+    'type':'vector',
+    'source':'ice_18000'
+    'layout':{
+      'visibility':'visible'
+    },
+    'paint':{
+      'fill-color':'#fff',
+      'fill-opacity':0.8
+    }
   });
 });
 
