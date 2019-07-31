@@ -53,27 +53,27 @@ section:last-child {
         <p></p>
     </section>
     <section id='17500' class='active'>
-        <h3>18,000 Years BCE</h3>
+        <h3>17,500 Years BCE</h3>
         <p></p>
     </section>
     <section id='17000' class='active'>
-        <h3>18,000 Years BCE</h3>
+        <h3>17,000 Years BCE</h3>
         <p></p>
     </section>
     <section id='16500' class='active'>
-        <h3>18,000 Years BCE</h3>
+        <h3>16,500 Years BCE</h3>
         <p></p>
     </section>
     <section id='16000' class='active'>
-        <h3>18,000 Years BCE</h3>
+        <h3>16,000 Years BCE</h3>
         <p></p>
     </section>
     <section id='15500' class='active'>
-        <h3>18,000 Years BCE</h3>
+        <h3>15,500 Years BCE</h3>
         <p></p>
     </section>
     <section id='15000' class='active'>
-        <h3>18,000 Years BCE</h3>
+        <h3>15,000 Years BCE</h3>
         <p></p>
     </section>
         <small id="citation">
@@ -81,7 +81,7 @@ section:last-child {
         </small>
     </section>
     <section id='14500' class='active'>
-        <h3>18,000 Years BCE</h3>
+        <h3>14,500 Years BCE</h3>
         <p></p>
     </section>
         <small id="citation">
@@ -89,7 +89,7 @@ section:last-child {
         </small>
     </section>
     <section id='14000' class='active'>
-        <h3>18,000 Years BCE</h3>
+        <h3>14,000 Years BCE</h3>
         <p></p>
     </section>
         <small id="citation">
@@ -97,7 +97,7 @@ section:last-child {
         </small>
     </section>
     <section id='13500' class='active'>
-        <h3>18,000 Years BCE</h3>
+        <h3>13,500 Years BCE</h3>
         <p></p>
     </section>
         <small id="citation">
@@ -105,7 +105,7 @@ section:last-child {
         </small>
     </section>
     <section id='13000' class='active'>
-        <h3>18,000 Years BCE</h3>
+        <h3>13,000 Years BCE</h3>
         <p></p>
     </section>
         <small id="citation">
@@ -113,7 +113,7 @@ section:last-child {
         </small>
     </section>
     <section id='12500' class='active'>
-        <h3>18,000 Years BCE</h3>
+        <h3>12,500 Years BCE</h3>
         <p></p>
     </section>
         <small id="citation">
@@ -121,7 +121,7 @@ section:last-child {
         </small>
     </section>
     <section id='12000' class='active'>
-        <h3>18,000 Years BCE</h3>
+        <h3>12,000 Years BCE</h3>
         <p></p>
     </section>
         <small id="citation">
@@ -129,7 +129,7 @@ section:last-child {
         </small>
     </section>
     <section id='11500' class='active'>
-        <h3>18,000 Years BCE</h3>
+        <h3>11,500 Years BCE</h3>
         <p></p>
     </section>
         <small id="citation">
@@ -137,7 +137,7 @@ section:last-child {
         </small>
     </section>
     <section id='11000' class='active'>
-        <h3>18,000 Years BCE</h3>
+        <h3>11,000 Years BCE</h3>
         <p></p>
     </section>
         <small id="citation">
@@ -145,7 +145,7 @@ section:last-child {
         </small>
     </section>
     <section id='10500' class='active'>
-        <h3>18,000 Years BCE</h3>
+        <h3>10,500 Years BCE</h3>
         <p></p>
     </section>
         <small id="citation">
@@ -153,20 +153,12 @@ section:last-child {
         </small>
     </section>
     <section id='10000' class='active'>
-        <h3>18,000 Years BCE</h3>
+        <h3>10,000 Years BCE</h3>
         <p></p>
-    </section>
-        <small id="citation">
-            Adapted from <a href='http://www.gutenberg.org/files/2346/2346-h/2346-h.htm'>Project Gutenberg</a>
-        </small>
     </section>
     <section id='Outro' class='active'>
-        <h3>18,000 Years BCE</h3>
+        <h3>Outro</h3>
         <p></p>
-    </section>
-        <small id="citation">
-            Adapted from <a href='http://www.gutenberg.org/files/2346/2346-h/2346-h.htm'>Project Gutenberg</a>
-        </small>
     </section>
 </div>
 <script>
@@ -181,6 +173,7 @@ var map = new mapboxgl.Map({
     pitch: 45
 });
 
+//18000 BCE Layers
 map.on('load', function (){
   map.addSource('ice_18000', {
   type: 'geojson',
@@ -191,6 +184,9 @@ map.on('load', function (){
     'id':'ice_18000',
     'type':'fill',
     'source':'ice_18000',
+    'layout':{
+      'visibility':'visible'
+    },
     'paint':{
       'fill-color':'#ffffff'
     }
@@ -213,6 +209,7 @@ map.on('load', function (){
   });
 });
 
+//17500 BCE Layers
 map.on('load', function (){
   map.addSource('ice_17500', {
   type: 'geojson',
@@ -245,6 +242,7 @@ map.on('load', function (){
   });
 });
 
+//17000 BCE Layers
 map.on('load', function (){
   map.addSource('ice_17000', {
   type: 'geojson',
@@ -277,6 +275,7 @@ map.on('load', function (){
   });
 });
 
+//16500 BCE Layers
 map.on('load', function (){
   map.addSource('ice_16500', {
   type: 'geojson',
@@ -309,6 +308,7 @@ map.on('load', function (){
   });
 });
 
+//16000 BCE Layers
 map.on('load', function (){
   map.addSource('ice_16000', {
   type: 'geojson',
@@ -341,6 +341,7 @@ map.on('load', function (){
   });
 });
 
+//15500 BCE Layers
 map.on('load', function (){
   map.addSource('ice_15500', {
   type: 'geojson',
@@ -373,6 +374,7 @@ map.on('load', function (){
   });
 });
 
+//15000 BCE Layers
 map.on('load', function (){
   map.addSource('ice_15000', {
   type: 'geojson',
@@ -405,6 +407,7 @@ map.on('load', function (){
   });
 });
 
+//14500 BCE Layers
 map.on('load', function (){
   map.addSource('ice_14500', {
   type: 'geojson',
@@ -437,6 +440,7 @@ map.on('load', function (){
   });
 });
 
+//14000 BCE Layers
 map.on('load', function (){
   map.addSource('ice_14000', {
   type: 'geojson',
@@ -469,6 +473,7 @@ map.on('load', function (){
   });
 });
 
+//13500 BCE Layers
 map.on('load', function (){
   map.addSource('ice_13500', {
   type: 'geojson',
@@ -501,6 +506,7 @@ map.on('load', function (){
   });
 });
 
+//13000 BCE Layers
 map.on('load', function (){
   map.addSource('ice_13000', {
   type: 'geojson',
@@ -533,6 +539,7 @@ map.on('load', function (){
   });
 });
 
+//12500 BCE Layers
 map.on('load', function (){
   map.addSource('ice_12500', {
   type: 'geojson',
@@ -565,6 +572,7 @@ map.on('load', function (){
   });
 });
 
+//12000 BCE Layers
 map.on('load', function (){
   map.addSource('ice_12000', {
   type: 'geojson',
@@ -597,6 +605,7 @@ map.on('load', function (){
   });
 });
 
+//11500 BCE Layers
 map.on('load', function (){
   map.addSource('ice_11500', {
   type: 'geojson',
@@ -629,6 +638,7 @@ map.on('load', function (){
   });
 });
 
+//11000 BCE Layers
 map.on('load', function (){
   map.addSource('ice_11000', {
   type: 'geojson',
@@ -661,6 +671,7 @@ map.on('load', function (){
   });
 });
 
+//10500 BCE Layers
 map.on('load', function (){
   map.addSource('ice_10500', {
   type: 'geojson',
@@ -693,6 +704,7 @@ map.on('load', function (){
   });
 });
 
+//10000 BCE Layers
 map.on('load', function (){
   map.addSource('ice_10000', {
   type: 'geojson',
@@ -726,54 +738,40 @@ map.on('load', function (){
 });
 
 var chapters = {
-    'Intro': {
-        bearing: 27,
+    'intro': {
         center: [-0.15591514, 51.51830379],
         zoom: 15.5,
-        pitch: 20
     },
     '18000': {
         duration: 6000,
         center: [-0.07571203, 51.51424049],
-        bearing: 150,
         zoom: 15,
-        pitch: 0
     },
     '17500': {
-        bearing: 90,
         center: [-0.08533793, 51.50438536],
         zoom: 13,
         speed: 0.6,
-        pitch: 40
     },
     '17000': {
-        bearing: 90,
         center: [0.05991101, 51.48752939],
         zoom: 12.3
     },
     '16500': {
-        bearing: 45,
         center: [-0.18335806, 51.49439521],
         zoom: 15.3,
-        pitch: 20,
         speed: 0.5
     },
     '16000': {
-        bearing: 180,
         center: [-0.19684993, 51.5033856],
         zoom: 12.3
     },
     '15500': {
-        bearing: 90,
         center: [-0.10669358, 51.51433123],
         zoom: 17.3,
-        pitch: 40
     },
     '15000': {
-        bearing: 90,
         center: [-0.12416858, 51.50779757],
         zoom: 14.3,
-        pitch: 20
     }
     /*'14500': {
         bearing: 90,
@@ -855,7 +853,7 @@ window.onscroll = function() {
     }
 };
 
-var activeChapterName = 'baker';
+var activeChapterName = 'intro';
 function setActiveChapter(chapterName) {
     if (chapterName === activeChapterName) return;
 
