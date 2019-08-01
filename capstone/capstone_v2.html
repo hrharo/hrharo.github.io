@@ -75,9 +75,46 @@ section:last-child {
     <section id='lgm-14500'>
         <h3>Charing Cross Hotel</h3>
         <p>Walter writes to Oberstein and convinces him to meet in the smoking room of the Charing Cross Hotel where he promises additional plans for the submarine in exchange for money. The plan works and Holmes and Watson catch both criminals.</p>
-        <small id="citation">
-            Adapted from <a href='http://www.gutenberg.org/files/2346/2346-h/2346-h.htm'>Project Gutenberg</a>
-        </small>
+    </section>
+    <section id='lgm-14000'>
+        <h3>221b Baker St.</h3>
+        <p>November 1895. London is shrouded in fog and Sherlock Holmes and Watson pass time restlessly awaiting a new case. "The London criminal is certainly a dull fellow," Sherlock bemoans. "There have been numerous petty thefts," Watson offers in response. Just then a telegram arrives from Sherlock's brother Mycroft with a mysterious case.</p>
+    </section>
+    <section id='lgm-13500'>
+        <h3>Aldgate Station</h3>
+        <p>Arthur Cadogan West was found dead, head crushed in on train tracks at Aldgate Station at 6AM Tuesday morning. West worked at Woolwich Arsenal on the Bruce-Partington submarine, a secret military project. Plans for the submarine had been stolen and seven of the ten missing papers were found in West's possession. Mycroft implores Sherlock to take the case and recover the three missing papers.</p>
+    </section>
+    <section id='lgm-13000'>
+        <h3>London Bridge</h3>
+        <p>Holmes and Watson's investigations take them across London. Sherlock deduces that West was murdered elsewhere, then moved to Aldgate Station to create the illusion that he was crushed on the tracks by a train. On their way to Woolwich Sherlock dispatches a telegram to Mycroft at London Bridge: "Send list of all foreign spies known to be in England, with full address."</p>
+    </section>
+    <section id='lgm-12500'>
+        <h3>Woolwich Arsenal</h3>
+        <p>While investigating at Woolwich Arsenal Sherlock learns that West did not have the three keys&mdash;door, office, and safe&mdash;necessary to steal the papers. The train station clerk mentions seeing an agitated West boarding the 8:15 train to London Bridge. Sherlock suspects West of following someone who had access to the Woolwich chief's keyring with all three keys.</p>
+    </section>
+    <section id='lgm-16000'>
+        <h3>Gloucester Road</h3>
+        <p>Mycroft responds to Sherlock's telegram and mentions several spies. Hugo Oberstein of 13 Caulfield Gardens catches Sherlock's eye. He heads to the nearby Gloucester Road station to investigate and learns that the windows of Caulfield Gardens open over rail tracks where trains stop frequently.</p>
+    </section>
+    <section id='lgm-12000'>
+        <h3>13 Caulfield Gardens</h3>
+        <p>Holmes deduces that the murderer placed West atop a stopped train at Caulfield Gardens. The train traveled to Aldgate Station before West's body finally toppled off. Backtracking to the criminal's apartment, Holmes finds a series of classified ads from <em>The Daily Telegraph</em> stashed away. All are under the name Pierrot: "Monday night after nine. Two taps. Only ourselves. Do not be so suspicious. Payment in hard cash when goods delivered."</p>
+    </section>
+    <section id='lgm-11500'>
+        <h3>The Daily Telegraph</h3>
+        <p>Holmes and Watson head to The Daily Telegraph and place an ad to draw out the criminal. It reads: "To-night. Same hour. Same place. Two taps. Most vitally important. Your own safety at stake. Pierrot." The trap works and Holmes catches the criminal: Colonel Valentine Walter, the brother of Woolwich Arsenal's chief. He confesses to working for Hugo Oberstein to obtain the submarine plans in order to pay off his debts.</p>
+    </section>
+    <section id='lgm-11000'>
+        <h3>Charing Cross Hotel</h3>
+        <p>Walter writes to Oberstein and convinces him to meet in the smoking room of the Charing Cross Hotel where he promises additional plans for the submarine in exchange for money. The plan works and Holmes and Watson catch both criminals.</p>
+    </section>
+    <section id='lgm-10500'>
+        <h3>Charing Cross Hotel</h3>
+        <p>Walter writes to Oberstein and convinces him to meet in the smoking room of the Charing Cross Hotel where he promises additional plans for the submarine in exchange for money. The plan works and Holmes and Watson catch both criminals.</p>
+    </section>
+    <section id='lgm-10000'>
+        <h3>Charing Cross Hotel</h3>
+        <p>Walter writes to Oberstein and convinces him to meet in the smoking room of the Charing Cross Hotel where he promises additional plans for the submarine in exchange for money. The plan works and Holmes and Watson catch both criminals.</p>
     </section>
 </div>
 <script>
@@ -443,6 +480,318 @@ map.on('load', function (){
   });
 });
 
+//13500 BCE Layers
+map.on('load', function (){
+  map.addSource('ice_13500', {
+  type: 'geojson',
+  data: 'https://raw.githubusercontent.com/hrharo/hrharo.github.io/master/capstone/data/ice_13500.json'
+  });
+  map.addLayer(
+    {
+    'id':'ice_13500',
+    'type':'fill',
+    'source':'ice_13500',
+    'layout':{
+      'visibility':'none'
+    },
+    'paint':{
+      'fill-color':'#ffffff'
+    }
+  });
+});
+
+map.on('load', function (){
+  map.addSource('lakes_13500', {
+  type: 'geojson',
+  data: 'https://raw.githubusercontent.com/hrharo/hrharo.github.io/master/capstone/data/lakes_13500.json'
+  });
+  map.addLayer(
+    {
+    'id':'lakes_13500',
+    'type':'fill',
+    'source':'lakes_13500',
+    'layout':{
+      'visibility':'none'
+    },
+    'paint':{
+      'fill-color':'#75cff0'
+    }
+  });
+});
+
+//13000 BCE Layers
+map.on('load', function (){
+  map.addSource('ice_13000', {
+  type: 'geojson',
+  data: 'https://raw.githubusercontent.com/hrharo/hrharo.github.io/master/capstone/data/ice_13000.json'
+  });
+  map.addLayer(
+    {
+    'id':'ice_13000',
+    'type':'fill',
+    'source':'ice_13000',
+    'layout':{
+      'visibility':'none'
+    },
+    'paint':{
+      'fill-color':'#ffffff'
+    }
+  });
+});
+
+map.on('load', function (){
+  map.addSource('lakes_13000', {
+  type: 'geojson',
+  data: 'https://raw.githubusercontent.com/hrharo/hrharo.github.io/master/capstone/data/lakes_13000.json'
+  });
+  map.addLayer(
+    {
+    'id':'lakes_13000',
+    'type':'fill',
+    'source':'lakes_13000',
+    'layout':{
+      'visibility':'none'
+    },
+    'paint':{
+      'fill-color':'#75cff0'
+    }
+  });
+});
+
+//12500 BCE Layers
+map.on('load', function (){
+  map.addSource('ice_12500', {
+  type: 'geojson',
+  data: 'https://raw.githubusercontent.com/hrharo/hrharo.github.io/master/capstone/data/ice_12500.json'
+  });
+  map.addLayer(
+    {
+    'id':'ice_12500',
+    'type':'fill',
+    'source':'ice_12500',
+    'layout':{
+      'visibility':'none'
+    },
+    'paint':{
+      'fill-color':'#ffffff'
+    }
+  });
+});
+
+map.on('load', function (){
+  map.addSource('lakes_12500', {
+  type: 'geojson',
+  data: 'https://raw.githubusercontent.com/hrharo/hrharo.github.io/master/capstone/data/lakes_12500.json'
+  });
+  map.addLayer(
+    {
+    'id':'lakes_12500',
+    'type':'fill',
+    'source':'lakes_12500',
+    'layout':{
+      'visibility':'none'
+    },
+    'paint':{
+      'fill-color':'#75cff0'
+    }
+  });
+});
+
+//12000 BCE Layers
+map.on('load', function (){
+  map.addSource('ice_12000', {
+  type: 'geojson',
+  data: 'https://raw.githubusercontent.com/hrharo/hrharo.github.io/master/capstone/data/ice_12000.json'
+  });
+  map.addLayer(
+    {
+    'id':'ice_12000',
+    'type':'fill',
+    'source':'ice_12000',
+    'layout':{
+      'visibility':'none'
+    },
+    'paint':{
+      'fill-color':'#ffffff'
+    }
+  });
+});
+
+map.on('load', function (){
+  map.addSource('lakes_12000', {
+  type: 'geojson',
+  data: 'https://raw.githubusercontent.com/hrharo/hrharo.github.io/master/capstone/data/lakes_12000.json'
+  });
+  map.addLayer(
+    {
+    'id':'lakes_12000',
+    'type':'fill',
+    'source':'lakes_12000',
+    'layout':{
+      'visibility':'none'
+    },
+    'paint':{
+      'fill-color':'#75cff0'
+    }
+  });
+});
+
+//11500 BCE Layers
+map.on('load', function (){
+  map.addSource('ice_11500', {
+  type: 'geojson',
+  data: 'https://raw.githubusercontent.com/hrharo/hrharo.github.io/master/capstone/data/ice_11500.json'
+  });
+  map.addLayer(
+    {
+    'id':'ice_11500',
+    'type':'fill',
+    'source':'ice_11500',
+    'layout':{
+      'visibility':'none'
+    },
+    'paint':{
+      'fill-color':'#ffffff'
+    }
+  });
+});
+
+map.on('load', function (){
+  map.addSource('lakes_11500', {
+  type: 'geojson',
+  data: 'https://raw.githubusercontent.com/hrharo/hrharo.github.io/master/capstone/data/lakes_11500.json'
+  });
+  map.addLayer(
+    {
+    'id':'lakes_11500',
+    'type':'fill',
+    'source':'lakes_11500',
+    'layout':{
+      'visibility':'none'
+    },
+    'paint':{
+      'fill-color':'#75cff0'
+    }
+  });
+});
+
+//11000 BCE Layers
+map.on('load', function (){
+  map.addSource('ice_11000', {
+  type: 'geojson',
+  data: 'https://raw.githubusercontent.com/hrharo/hrharo.github.io/master/capstone/data/ice_11000.json'
+  });
+  map.addLayer(
+    {
+    'id':'ice_11000',
+    'type':'fill',
+    'source':'ice_11000',
+    'layout':{
+      'visibility':'none'
+    },
+    'paint':{
+      'fill-color':'#ffffff'
+    }
+  });
+});
+
+map.on('load', function (){
+  map.addSource('lakes_11000', {
+  type: 'geojson',
+  data: 'https://raw.githubusercontent.com/hrharo/hrharo.github.io/master/capstone/data/lakes_11000.json'
+  });
+  map.addLayer(
+    {
+    'id':'lakes_11000',
+    'type':'fill',
+    'source':'lakes_11000',
+    'layout':{
+      'visibility':'none'
+    },
+    'paint':{
+      'fill-color':'#75cff0'
+    }
+  });
+});
+
+//10500 BCE Layers
+map.on('load', function (){
+  map.addSource('ice_10500', {
+  type: 'geojson',
+  data: 'https://raw.githubusercontent.com/hrharo/hrharo.github.io/master/capstone/data/ice_10500.json'
+  });
+  map.addLayer(
+    {
+    'id':'ice_10500',
+    'type':'fill',
+    'source':'ice_10500',
+    'layout':{
+      'visibility':'none'
+    },
+    'paint':{
+      'fill-color':'#ffffff'
+    }
+  });
+});
+
+map.on('load', function (){
+  map.addSource('lakes_10500', {
+  type: 'geojson',
+  data: 'https://raw.githubusercontent.com/hrharo/hrharo.github.io/master/capstone/data/lakes_10500.json'
+  });
+  map.addLayer(
+    {
+    'id':'lakes_10500',
+    'type':'fill',
+    'source':'lakes_10500',
+    'layout':{
+      'visibility':'none'
+    },
+    'paint':{
+      'fill-color':'#75cff0'
+    }
+  });
+});
+
+//10000 BCE Layers
+map.on('load', function (){
+  map.addSource('ice_10000', {
+  type: 'geojson',
+  data: 'https://raw.githubusercontent.com/hrharo/hrharo.github.io/master/capstone/data/ice_10000.json'
+  });
+  map.addLayer(
+    {
+    'id':'ice_10000',
+    'type':'fill',
+    'source':'ice_10000',
+    'layout':{
+      'visibility':'none'
+    },
+    'paint':{
+      'fill-color':'#ffffff'
+    }
+  });
+});
+
+map.on('load', function (){
+  map.addSource('lakes_10000', {
+  type: 'geojson',
+  data: 'https://raw.githubusercontent.com/hrharo/hrharo.github.io/master/capstone/data/lakes_10000.json'
+  });
+  map.addLayer(
+    {
+    'id':'lakes_10000',
+    'type':'fill',
+    'source':'lakes_10000',
+    'layout':{
+      'visibility':'none'
+    },
+    'paint':{
+      'fill-color':'#75cff0'
+    }
+  });
+});
+
 var chapters = {
     'lgm-18000': {
         bearing: 0,
@@ -493,6 +842,60 @@ var chapters = {
         zoom: 3,
         pitch: 20
     }
+    'lgm-14000': {
+        bearing: 0,
+        center: [-123.329773, 48.407326],
+        zoom: 3,
+        pitch: 20
+    }
+    'lgm-13500': {
+        bearing: 0,
+        center: [-123.329773, 48.407326],
+        zoom: 3,
+        pitch: 20
+    }
+    'lgm-13000': {
+        bearing: 0,
+        center: [-123.329773, 48.407326],
+        zoom: 3,
+        pitch: 20
+    }
+    'lgm-12500': {
+        bearing: 0,
+        center: [-123.329773, 48.407326],
+        zoom: 3,
+        pitch: 20
+    }
+    'lgm-12000': {
+        bearing: 0,
+        center: [-123.329773, 48.407326],
+        zoom: 3,
+        pitch: 20
+    }
+    'lgm-11500': {
+        bearing: 0,
+        center: [-123.329773, 48.407326],
+        zoom: 3,
+        pitch: 20
+    }
+    'lgm-11000': {
+        bearing: 0,
+        center: [-123.329773, 48.407326],
+        zoom: 3,
+        pitch: 20
+    }
+    'lgm-10500': {
+        bearing: 0,
+        center: [-123.329773, 48.407326],
+        zoom: 3,
+        pitch: 20
+    }
+    'lgm-10000': {
+        bearing: 0,
+        center: [-123.329773, 48.407326],
+        zoom: 3,
+        pitch: 20
+    }
 };
 
 //var toggleableLayerIds = ['ice_18000', 'lakes_18000', 'ice_17500', 'lakes_17500', ' ice_17000', 'lakes_17000',
@@ -531,40 +934,40 @@ function isElementOnScreen(id) {
 
 function setActiveLayer(activeChapterName){
     if (activeChapterName === 'lgm-18000') {
-        map.setLayoutProperty('ice_18000', 'visibility', 'visible');
-        map.setLayoutProperty('lakes_18000', 'visibility', 'visible');
-        map.setLayoutProperty('ice_17500', 'visibility', 'none');
-        map.setLayoutProperty('lakes_17500', 'visibility', 'none');
-        map.setLayoutProperty('ice_17000', 'visibility', 'none');
-        map.setLayoutProperty('lakes_17000', 'visibility', 'none');
-        map.setLayoutProperty('ice_16500', 'visibility', 'none');
-        map.setLayoutProperty('lakes_16500', 'visibility', 'none');
-        map.setLayoutProperty('ice_16000', 'visibility', 'none');
-        map.setLayoutProperty('lakes_16000', 'visibility', 'none');
-        map.setLayoutProperty('ice_15500', 'visibility', 'none');
-        map.setLayoutProperty('lakes_15500', 'visibility', 'none');
-        map.setLayoutProperty('ice_15000', 'visibility', 'none');
-        map.setLayoutProperty('lakes_15000', 'visibility', 'none');
-        map.setLayoutProperty('ice_14500', 'visibility', 'none');
-        map.setLayoutProperty('lakes_14500', 'visibility', 'none');
-        map.setLayoutProperty('ice_14000', 'visibility', 'none');
-        map.setLayoutProperty('lakes_14000', 'visibility', 'none');
-        map.setLayoutProperty('ice_13500', 'visibility', 'none');
-        map.setLayoutProperty('lakes_13500', 'visibility', 'none');
-        map.setLayoutProperty('ice_13000', 'visibility', 'none');
-        map.setLayoutProperty('ice_13000', 'visibility', 'none');
-        map.setLayoutProperty('ice_12500', 'visibility', 'none');
-        map.setLayoutProperty('lakes_12500', 'visibility', 'none');
-        map.setLayoutProperty('ice_12000', 'visibility', 'none');
-        map.setLayoutProperty('lakes_12000', 'visibility', 'none');
-        map.setLayoutProperty('ice_11500', 'visibility', 'none');
-        map.setLayoutProperty('lakes_11500', 'visibility', 'none');
-        map.setLayoutProperty('ice_11000', 'visibility', 'none');
-        map.setLayoutProperty('lakes_11000', 'visibility', 'none');
-        map.setLayoutProperty('ice_10500', 'visibility', 'none');
-        map.setLayoutProperty('ice_10500', 'visibility', 'none');
-        map.setLayoutProperty('ice_10000', 'visibility', 'none');
-        map.setLayoutProperty('ice_10000', 'visibility', 'none');
+      map.setLayoutProperty('ice_18000', 'visibility', 'visible');
+      map.setLayoutProperty('lakes_18000', 'visibility', 'visible');
+      map.setLayoutProperty('ice_17500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_17500', 'visibility', 'none');
+      map.setLayoutProperty('ice_17000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_17000', 'visibility', 'none');
+      map.setLayoutProperty('ice_16500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_16500', 'visibility', 'none');
+      map.setLayoutProperty('ice_16000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_16000', 'visibility', 'none');
+      map.setLayoutProperty('ice_15500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_15500', 'visibility', 'none');
+      map.setLayoutProperty('ice_15000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_15000', 'visibility', 'none');
+      map.setLayoutProperty('ice_14500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_14500', 'visibility', 'none');
+      map.setLayoutProperty('ice_14000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_14000', 'visibility', 'none');
+      map.setLayoutProperty('ice_13500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_13500', 'visibility', 'none');
+      map.setLayoutProperty('ice_13000', 'visibility', 'none');
+      map.setLayoutProperty('ice_13000', 'visibility', 'none');
+      map.setLayoutProperty('ice_12500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_12500', 'visibility', 'none');
+      map.setLayoutProperty('ice_12000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_12000', 'visibility', 'none');
+      map.setLayoutProperty('ice_11500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_11500', 'visibility', 'none');
+      map.setLayoutProperty('ice_11000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_11000', 'visibility', 'none');
+      map.setLayoutProperty('ice_10500', 'visibility', 'none');
+      map.setLayoutProperty('ice_10500', 'visibility', 'none');
+      map.setLayoutProperty('ice_10000', 'visibility', 'none');
+      map.setLayoutProperty('ice_10000', 'visibility', 'none');
     };
     if (activeChapterName === 'lgm-17500') {
       map.setLayoutProperty('ice_18000', 'visibility', 'none');
@@ -601,7 +1004,7 @@ function setActiveLayer(activeChapterName){
       map.setLayoutProperty('ice_10500', 'visibility', 'none');
       map.setLayoutProperty('ice_10000', 'visibility', 'none');
       map.setLayoutProperty('ice_10000', 'visibility', 'none');
-  };
+    };
     if (activeChapterName === 'lgm-17000') {
       map.setLayoutProperty('ice_18000', 'visibility', 'none');
       map.setLayoutProperty('lakes_18000', 'visibility', 'none');
@@ -637,7 +1040,7 @@ function setActiveLayer(activeChapterName){
       map.setLayoutProperty('ice_10500', 'visibility', 'none');
       map.setLayoutProperty('ice_10000', 'visibility', 'none');
       map.setLayoutProperty('ice_10000', 'visibility', 'none');
-  };
+    };
     if (activeChapterName === 'lgm-16500') {
       map.setLayoutProperty('ice_18000', 'visibility', 'none');
       map.setLayoutProperty('lakes_18000', 'visibility', 'none');
@@ -673,7 +1076,7 @@ function setActiveLayer(activeChapterName){
       map.setLayoutProperty('ice_10500', 'visibility', 'none');
       map.setLayoutProperty('ice_10000', 'visibility', 'none');
       map.setLayoutProperty('ice_10000', 'visibility', 'none');
-  };
+    };
     if (activeChapterName === 'lgm-16000') {
       map.setLayoutProperty('ice_18000', 'visibility', 'none');
       map.setLayoutProperty('lakes_18000', 'visibility', 'none');
@@ -709,7 +1112,7 @@ function setActiveLayer(activeChapterName){
       map.setLayoutProperty('ice_10500', 'visibility', 'none');
       map.setLayoutProperty('ice_10000', 'visibility', 'none');
       map.setLayoutProperty('ice_10000', 'visibility', 'none');
-  };
+    };
     if (activeChapterName === 'lgm-15500') {
       map.setLayoutProperty('ice_18000', 'visibility', 'none');
       map.setLayoutProperty('lakes_18000', 'visibility', 'none');
@@ -745,7 +1148,7 @@ function setActiveLayer(activeChapterName){
       map.setLayoutProperty('ice_10500', 'visibility', 'none');
       map.setLayoutProperty('ice_10000', 'visibility', 'none');
       map.setLayoutProperty('ice_10000', 'visibility', 'none');
-  };
+    };
     if (activeChapterName === 'lgm-15000') {
       map.setLayoutProperty('ice_18000', 'visibility', 'none');
       map.setLayoutProperty('lakes_18000', 'visibility', 'none');
@@ -781,7 +1184,7 @@ function setActiveLayer(activeChapterName){
       map.setLayoutProperty('ice_10500', 'visibility', 'none');
       map.setLayoutProperty('ice_10000', 'visibility', 'none');
       map.setLayoutProperty('ice_10000', 'visibility', 'none');
-  };
+    };
     if (activeChapterName === 'lgm-14500') {
       map.setLayoutProperty('ice_18000', 'visibility', 'none');
       map.setLayoutProperty('lakes_18000', 'visibility', 'none');
@@ -817,7 +1220,7 @@ function setActiveLayer(activeChapterName){
       map.setLayoutProperty('ice_10500', 'visibility', 'none');
       map.setLayoutProperty('ice_10000', 'visibility', 'none');
       map.setLayoutProperty('ice_10000', 'visibility', 'none');
-  };
+    };
     if (activeChapterName === 'lgm-14000') {
       map.setLayoutProperty('ice_18000', 'visibility', 'none');
       map.setLayoutProperty('lakes_18000', 'visibility', 'none');
@@ -853,8 +1256,295 @@ function setActiveLayer(activeChapterName){
       map.setLayoutProperty('ice_10500', 'visibility', 'none');
       map.setLayoutProperty('ice_10000', 'visibility', 'none');
       map.setLayoutProperty('ice_10000', 'visibility', 'none');
-  };
-
+    };
+    if (activeChapterName === 'lgm-13500') {
+      map.setLayoutProperty('ice_18000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_18000', 'visibility', 'none');
+      map.setLayoutProperty('ice_17500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_17500', 'visibility', 'none');
+      map.setLayoutProperty('ice_17000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_17000', 'visibility', 'none');
+      map.setLayoutProperty('ice_16500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_16500', 'visibility', 'none');
+      map.setLayoutProperty('ice_16000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_16000', 'visibility', 'none');
+      map.setLayoutProperty('ice_15500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_15500', 'visibility', 'none')
+      map.setLayoutProperty('ice_15000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_15000', 'visibility', 'none');
+      map.setLayoutProperty('ice_14500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_14500', 'visibility', 'none');
+      map.setLayoutProperty('ice_14000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_14000', 'visibility', 'none');
+      map.setLayoutProperty('ice_13500', 'visibility', 'visible');
+      map.setLayoutProperty('lakes_13500', 'visibility', 'visible');
+      map.setLayoutProperty('ice_13000', 'visibility', 'none');
+      map.setLayoutProperty('ice_13000', 'visibility', 'none');
+      map.setLayoutProperty('ice_12500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_12500', 'visibility', 'none');
+      map.setLayoutProperty('ice_12000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_12000', 'visibility', 'none');
+      map.setLayoutProperty('ice_11500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_11500', 'visibility', 'none');
+      map.setLayoutProperty('ice_11000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_11000', 'visibility', 'none');
+      map.setLayoutProperty('ice_10500', 'visibility', 'none');
+      map.setLayoutProperty('ice_10500', 'visibility', 'none');
+      map.setLayoutProperty('ice_10000', 'visibility', 'none');
+      map.setLayoutProperty('ice_10000', 'visibility', 'none');
+    };
+    if (activeChapterName === 'lgm-13000') {
+      map.setLayoutProperty('ice_18000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_18000', 'visibility', 'none');
+      map.setLayoutProperty('ice_17500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_17500', 'visibility', 'none');
+      map.setLayoutProperty('ice_17000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_17000', 'visibility', 'none');
+      map.setLayoutProperty('ice_16500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_16500', 'visibility', 'none');
+      map.setLayoutProperty('ice_16000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_16000', 'visibility', 'none');
+      map.setLayoutProperty('ice_15500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_15500', 'visibility', 'none')
+      map.setLayoutProperty('ice_15000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_15000', 'visibility', 'none');
+      map.setLayoutProperty('ice_14500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_14500', 'visibility', 'none');
+      map.setLayoutProperty('ice_14000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_14000', 'visibility', 'none');
+      map.setLayoutProperty('ice_13500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_13500', 'visibility', 'none');
+      map.setLayoutProperty('ice_13000', 'visibility', 'visible');
+      map.setLayoutProperty('ice_13000', 'visibility', 'visible');
+      map.setLayoutProperty('ice_12500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_12500', 'visibility', 'none');
+      map.setLayoutProperty('ice_12000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_12000', 'visibility', 'none');
+      map.setLayoutProperty('ice_11500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_11500', 'visibility', 'none');
+      map.setLayoutProperty('ice_11000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_11000', 'visibility', 'none');
+      map.setLayoutProperty('ice_10500', 'visibility', 'none');
+      map.setLayoutProperty('ice_10500', 'visibility', 'none');
+      map.setLayoutProperty('ice_10000', 'visibility', 'none');
+      map.setLayoutProperty('ice_10000', 'visibility', 'none');
+    };
+    if (activeChapterName === 'lgm-12500') {
+      map.setLayoutProperty('ice_18000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_18000', 'visibility', 'none');
+      map.setLayoutProperty('ice_17500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_17500', 'visibility', 'none');
+      map.setLayoutProperty('ice_17000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_17000', 'visibility', 'none');
+      map.setLayoutProperty('ice_16500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_16500', 'visibility', 'none');
+      map.setLayoutProperty('ice_16000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_16000', 'visibility', 'none');
+      map.setLayoutProperty('ice_15500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_15500', 'visibility', 'none')
+      map.setLayoutProperty('ice_15000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_15000', 'visibility', 'none');
+      map.setLayoutProperty('ice_14500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_14500', 'visibility', 'none');
+      map.setLayoutProperty('ice_14000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_14000', 'visibility', 'none');
+      map.setLayoutProperty('ice_13500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_13500', 'visibility', 'none');
+      map.setLayoutProperty('ice_13000', 'visibility', 'none');
+      map.setLayoutProperty('ice_13000', 'visibility', 'none');
+      map.setLayoutProperty('ice_12500', 'visibility', 'visible');
+      map.setLayoutProperty('lakes_12500', 'visibility', 'visible');
+      map.setLayoutProperty('ice_12000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_12000', 'visibility', 'none');
+      map.setLayoutProperty('ice_11500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_11500', 'visibility', 'none');
+      map.setLayoutProperty('ice_11000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_11000', 'visibility', 'none');
+      map.setLayoutProperty('ice_10500', 'visibility', 'none');
+      map.setLayoutProperty('ice_10500', 'visibility', 'none');
+      map.setLayoutProperty('ice_10000', 'visibility', 'none');
+      map.setLayoutProperty('ice_10000', 'visibility', 'none');
+    };
+    if (activeChapterName === 'lgm-12000') {
+      map.setLayoutProperty('ice_18000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_18000', 'visibility', 'none');
+      map.setLayoutProperty('ice_17500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_17500', 'visibility', 'none');
+      map.setLayoutProperty('ice_17000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_17000', 'visibility', 'none');
+      map.setLayoutProperty('ice_16500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_16500', 'visibility', 'none');
+      map.setLayoutProperty('ice_16000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_16000', 'visibility', 'none');
+      map.setLayoutProperty('ice_15500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_15500', 'visibility', 'none')
+      map.setLayoutProperty('ice_15000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_15000', 'visibility', 'none');
+      map.setLayoutProperty('ice_14500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_14500', 'visibility', 'none');
+      map.setLayoutProperty('ice_14000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_14000', 'visibility', 'none');
+      map.setLayoutProperty('ice_13500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_13500', 'visibility', 'none');
+      map.setLayoutProperty('ice_13000', 'visibility', 'none');
+      map.setLayoutProperty('ice_13000', 'visibility', 'none');
+      map.setLayoutProperty('ice_12500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_12500', 'visibility', 'none');
+      map.setLayoutProperty('ice_12000', 'visibility', 'visible');
+      map.setLayoutProperty('lakes_12000', 'visibility', 'visible');
+      map.setLayoutProperty('ice_11500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_11500', 'visibility', 'none');
+      map.setLayoutProperty('ice_11000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_11000', 'visibility', 'none');
+      map.setLayoutProperty('ice_10500', 'visibility', 'none');
+      map.setLayoutProperty('ice_10500', 'visibility', 'none');
+      map.setLayoutProperty('ice_10000', 'visibility', 'none');
+      map.setLayoutProperty('ice_10000', 'visibility', 'none');
+    };
+    if (activeChapterName === 'lgm-11500') {
+      map.setLayoutProperty('ice_18000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_18000', 'visibility', 'none');
+      map.setLayoutProperty('ice_17500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_17500', 'visibility', 'none');
+      map.setLayoutProperty('ice_17000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_17000', 'visibility', 'none');
+      map.setLayoutProperty('ice_16500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_16500', 'visibility', 'none');
+      map.setLayoutProperty('ice_16000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_16000', 'visibility', 'none');
+      map.setLayoutProperty('ice_15500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_15500', 'visibility', 'none')
+      map.setLayoutProperty('ice_15000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_15000', 'visibility', 'none');
+      map.setLayoutProperty('ice_14500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_14500', 'visibility', 'none');
+      map.setLayoutProperty('ice_14000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_14000', 'visibility', 'none');
+      map.setLayoutProperty('ice_13500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_13500', 'visibility', 'none');
+      map.setLayoutProperty('ice_13000', 'visibility', 'none');
+      map.setLayoutProperty('ice_13000', 'visibility', 'none');
+      map.setLayoutProperty('ice_12500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_12500', 'visibility', 'none');
+      map.setLayoutProperty('ice_12000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_12000', 'visibility', 'none');
+      map.setLayoutProperty('ice_11500', 'visibility', 'visible');
+      map.setLayoutProperty('lakes_11500', 'visibility', 'visible');
+      map.setLayoutProperty('ice_11000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_11000', 'visibility', 'none');
+      map.setLayoutProperty('ice_10500', 'visibility', 'none');
+      map.setLayoutProperty('ice_10500', 'visibility', 'none');
+      map.setLayoutProperty('ice_10000', 'visibility', 'none');
+      map.setLayoutProperty('ice_10000', 'visibility', 'none');
+    };
+    if (activeChapterName === 'lgm-11000') {
+      map.setLayoutProperty('ice_18000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_18000', 'visibility', 'none');
+      map.setLayoutProperty('ice_17500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_17500', 'visibility', 'none');
+      map.setLayoutProperty('ice_17000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_17000', 'visibility', 'none');
+      map.setLayoutProperty('ice_16500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_16500', 'visibility', 'none');
+      map.setLayoutProperty('ice_16000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_16000', 'visibility', 'none');
+      map.setLayoutProperty('ice_15500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_15500', 'visibility', 'none')
+      map.setLayoutProperty('ice_15000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_15000', 'visibility', 'none');
+      map.setLayoutProperty('ice_14500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_14500', 'visibility', 'none');
+      map.setLayoutProperty('ice_14000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_14000', 'visibility', 'none');
+      map.setLayoutProperty('ice_13500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_13500', 'visibility', 'none');
+      map.setLayoutProperty('ice_13000', 'visibility', 'none');
+      map.setLayoutProperty('ice_13000', 'visibility', 'none');
+      map.setLayoutProperty('ice_12500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_12500', 'visibility', 'none');
+      map.setLayoutProperty('ice_12000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_12000', 'visibility', 'none');
+      map.setLayoutProperty('ice_11500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_11500', 'visibility', 'none');
+      map.setLayoutProperty('ice_11000', 'visibility', 'visible');
+      map.setLayoutProperty('lakes_11000', 'visibility', 'visible');
+      map.setLayoutProperty('ice_10500', 'visibility', 'none');
+      map.setLayoutProperty('ice_10500', 'visibility', 'none');
+      map.setLayoutProperty('ice_10000', 'visibility', 'none');
+      map.setLayoutProperty('ice_10000', 'visibility', 'none');
+    };
+    if (activeChapterName === 'lgm-10500') {
+      map.setLayoutProperty('ice_18000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_18000', 'visibility', 'none');
+      map.setLayoutProperty('ice_17500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_17500', 'visibility', 'none');
+      map.setLayoutProperty('ice_17000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_17000', 'visibility', 'none');
+      map.setLayoutProperty('ice_16500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_16500', 'visibility', 'none');
+      map.setLayoutProperty('ice_16000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_16000', 'visibility', 'none');
+      map.setLayoutProperty('ice_15500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_15500', 'visibility', 'none')
+      map.setLayoutProperty('ice_15000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_15000', 'visibility', 'none');
+      map.setLayoutProperty('ice_14500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_14500', 'visibility', 'none');
+      map.setLayoutProperty('ice_14000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_14000', 'visibility', 'none');
+      map.setLayoutProperty('ice_13500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_13500', 'visibility', 'none');
+      map.setLayoutProperty('ice_13000', 'visibility', 'none');
+      map.setLayoutProperty('ice_13000', 'visibility', 'none');
+      map.setLayoutProperty('ice_12500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_12500', 'visibility', 'none');
+      map.setLayoutProperty('ice_12000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_12000', 'visibility', 'none');
+      map.setLayoutProperty('ice_11500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_11500', 'visibility', 'none');
+      map.setLayoutProperty('ice_11000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_11000', 'visibility', 'none');
+      map.setLayoutProperty('ice_10500', 'visibility', 'visible');
+      map.setLayoutProperty('ice_10500', 'visibility', 'visible');
+      map.setLayoutProperty('ice_10000', 'visibility', 'none');
+      map.setLayoutProperty('ice_10000', 'visibility', 'none');
+    };
+    if (activeChapterName === 'lgm-10000') {
+      map.setLayoutProperty('ice_18000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_18000', 'visibility', 'none');
+      map.setLayoutProperty('ice_17500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_17500', 'visibility', 'none');
+      map.setLayoutProperty('ice_17000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_17000', 'visibility', 'none');
+      map.setLayoutProperty('ice_16500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_16500', 'visibility', 'none');
+      map.setLayoutProperty('ice_16000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_16000', 'visibility', 'none');
+      map.setLayoutProperty('ice_15500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_15500', 'visibility', 'none')
+      map.setLayoutProperty('ice_15000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_15000', 'visibility', 'none');
+      map.setLayoutProperty('ice_14500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_14500', 'visibility', 'none');
+      map.setLayoutProperty('ice_14000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_14000', 'visibility', 'none');
+      map.setLayoutProperty('ice_13500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_13500', 'visibility', 'none');
+      map.setLayoutProperty('ice_13000', 'visibility', 'none');
+      map.setLayoutProperty('ice_13000', 'visibility', 'none');
+      map.setLayoutProperty('ice_12500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_12500', 'visibility', 'none');
+      map.setLayoutProperty('ice_12000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_12000', 'visibility', 'none');
+      map.setLayoutProperty('ice_11500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_11500', 'visibility', 'none');
+      map.setLayoutProperty('ice_11000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_11000', 'visibility', 'none');
+      map.setLayoutProperty('ice_10500', 'visibility', 'none');
+      map.setLayoutProperty('ice_10500', 'visibility', 'none');
+      map.setLayoutProperty('ice_10000', 'visibility', 'visible');
+      map.setLayoutProperty('ice_10000', 'visibility', 'visible');
+    };
 }
 
 </script>
