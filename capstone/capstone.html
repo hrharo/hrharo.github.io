@@ -861,72 +861,6 @@ var chapters = {
         center: [-0.12416858, 51.50779757],
         zoom: 14.3,
     }
-    /*'14500': {
-        bearing: 90,
-        center: [-0.12516858, 51.50779757],
-        zoom: 14.3,
-        pitch: 20
-    }
-    '14000': {
-        bearing: 90,
-        center: [-0.12216858, 51.50779757],
-        zoom: 14.3,
-        pitch: 20
-    }
-    '13500': {
-        bearing: 90,
-        center: [-0.12016858, 51.50779757],
-        zoom: 14.3,
-        pitch: 20
-    }
-    '13000': {
-        bearing: 90,
-        center: [-0.12916858, 51.50779757],
-        zoom: 14.3,
-        pitch: 20
-    }
-    '12500': {
-        bearing: 90,
-        center: [-0.13016858, 51.50779757],
-        zoom: 14.3,
-        pitch: 20
-    }
-    '12000': {
-        bearing: 90,
-        center: [-0.14016858, 51.50779757],
-        zoom: 14.3,
-        pitch: 20
-    }
-    '11500': {
-        bearing: 90,
-        center: [-0.17516858, 51.50779757],
-        zoom: 14.3,
-        pitch: 20
-    }
-    '11000': {
-        bearing: 90,
-        center: [-0.17316858, 51.50779757],
-        zoom: 14.3,
-        pitch: 20
-    }
-    '11000': {
-        bearing: 90,
-        center: [-0.10216858, 51.50779757],
-        zoom: 14.3,
-        pitch: 20
-    }
-    '10500': {
-        bearing: 90,
-        center: [-0.10116858, 51.50779757],
-        zoom: 14.3,
-        pitch: 20
-    }
-    '10000': {
-        bearing: 90,
-        center: [-0.19416858, 51.50779757],
-        zoom: 14.3,
-        pitch: 20
-    }*/
 };
 
 // On every scroll event, check which element is on screen
@@ -941,36 +875,9 @@ window.onscroll = function() {
     }
 };
 
-var activeChapterName = '18000';
-function setActiveChapter(chapterName) {
-    if (chapterName === activeChapterName) return;
-
-    map.flyTo(chapters[chapterName]);
-
-    document.getElementById(chapterName).setAttribute('class', 'active');
-    document.getElementById(activeChapterName).setAttribute('class', '');
-
-    activeChapterName = chapterName;
-}
-
-function isElementOnScreen(id) {
-    var element = document.getElementById(id);
-    var bounds = element.getBoundingClientRect();
-    return bounds.top < window.innerHeight && bounds.bottom > 0;
-}
-
 //function to make layers visible
 function setActiveLayer() {
-    var layerNames = Object.keys(chapters);
-    if (chapterName = '18000') return;
-    map.getLayoutProperty(activeLayer, 'visibility');
-
-    if (visibility === 'visible') {
-      map.setLayoutProperty(activeLayer, 'visibility', 'none');
-
-    }
-
-
+    if (activeChapterName = '18000'){
     map.setLayoutProperty('ice_18000', 'visibility', 'visible');
     map.setLayoutProperty('lakes_18000', 'visibility', 'visible');
     map.setLayoutProperty('ice_17500', 'visibiliy', 'none');
@@ -1005,6 +912,60 @@ function setActiveLayer() {
     map.setLayoutProperty('lakes_10500', 'visibiliy', 'none');
     map.setLayoutProperty('ice_10000', 'visibiliy', 'none');
     map.setLayoutProperty('lakes_10000', 'visibiliy', 'none');
+  } else if (activeChapterName == '17500'){
+    map.setLayoutProperty('ice_18000', 'visibility', 'none');
+    map.setLayoutProperty('lakes_18000', 'visibility', 'none');
+    map.setLayoutProperty('ice_17500', 'visibiliy', 'visible');
+    map.setLayoutProperty('lakes_17500', 'visibiliy', 'visible');
+    map.setLayoutProperty('ice_17000', 'visibiliy', 'none');
+    map.setLayoutProperty('lakes_17000', 'visibiliy', 'none');
+    map.setLayoutProperty('ice_16500', 'visibiliy', 'none');
+    map.setLayoutProperty('lakes_16500', 'visibiliy', 'none');
+    map.setLayoutProperty('ice_16000', 'visibiliy', 'none');
+    map.setLayoutProperty('lakes_16000', 'visibiliy', 'none');
+    map.setLayoutProperty('ice_15500', 'visibiliy', 'none');
+    map.setLayoutProperty('lakes_15500', 'visibiliy', 'none');
+    map.setLayoutProperty('ice_15000', 'visibiliy', 'none');
+    map.setLayoutProperty('lakes_15000', 'visibiliy', 'none');
+    map.setLayoutProperty('ice_14500', 'visibiliy', 'none');
+    map.setLayoutProperty('lakes_14500', 'visibiliy', 'none');
+    map.setLayoutProperty('ice_14000', 'visibiliy', 'none');
+    map.setLayoutProperty('lakes_14000', 'visibiliy', 'none');
+    map.setLayoutProperty('ice_13500', 'visibiliy', 'none');
+    map.setLayoutProperty('lakes_13500', 'visibiliy', 'none');
+    map.setLayoutProperty('ice_13000', 'visibiliy', 'none');
+    map.setLayoutProperty('lakes_13000', 'visibiliy', 'none');
+    map.setLayoutProperty('ice_12500', 'visibiliy', 'none');
+    map.setLayoutProperty('lakes_12500', 'visibiliy', 'none');
+    map.setLayoutProperty('ice_12000', 'visibiliy', 'none');
+    map.setLayoutProperty('lakes_12000', 'visibiliy', 'none');
+    map.setLayoutProperty('ice_11500', 'visibiliy', 'none');
+    map.setLayoutProperty('lakes_11500', 'visibiliy', 'none');
+    map.setLayoutProperty('ice_11000', 'visibiliy', 'none');
+    map.setLayoutProperty('lakes_11000', 'visibiliy', 'none');
+    map.setLayoutProperty('ice_10500', 'visibiliy', 'none');
+    map.setLayoutProperty('lakes_10500', 'visibiliy', 'none');
+    map.setLayoutProperty('ice_10000', 'visibiliy', 'none');
+    map.setLayoutProperty('lakes_10000', 'visibiliy', 'none');
+  }
+}
+
+var activeChapterName = '18000';
+function setActiveChapter(chapterName) {
+    if (chapterName === activeChapterName) return;
+
+    map.flyTo(chapters[chapterName]);
+
+    document.getElementById(chapterName).setAttribute('class', 'active');
+    document.getElementById(activeChapterName).setAttribute('class', '');
+
+    activeChapterName = chapterName;
+}
+
+function isElementOnScreen(id) {
+    var element = document.getElementById(id);
+    var bounds = element.getBoundingClientRect();
+    return bounds.top < window.innerHeight && bounds.bottom > 0;
 }
 
 </script>
