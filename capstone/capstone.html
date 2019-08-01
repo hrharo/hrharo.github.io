@@ -48,31 +48,31 @@ section:last-child {
         <h3>Ice Age Deglaciation in the Pacific Northwest</h3>
         <p></p>
     </section>
-    <section id='18000' class='active'>
+    <section id='18000'>
         <h3>18,000 Years BCE</h3>
         <p></p>
     </section>
-    <section id='17500' class='active'>
+    <section id='17500'>
         <h3>17,500 Years BCE</h3>
         <p></p>
     </section>
-    <section id='17000' class='active'>
+    <section id='17000'>
         <h3>17,000 Years BCE</h3>
         <p></p>
     </section>
-    <section id='16500' class='active'>
+    <section id='16500'>
         <h3>16,500 Years BCE</h3>
         <p></p>
     </section>
-    <section id='16000' class='active'>
+    <section id='16000'>
         <h3>16,000 Years BCE</h3>
         <p></p>
     </section>
-    <section id='15500' class='active'>
+    <section id='15500'>
         <h3>15,500 Years BCE</h3>
         <p></p>
     </section>
-    <section id='15000' class='active'>
+    <section id='15000'>
         <h3>15,000 Years BCE</h3>
         <p></p>
     </section>
@@ -80,7 +80,7 @@ section:last-child {
             Adapted from <a href='http://www.gutenberg.org/files/2346/2346-h/2346-h.htm'>Project Gutenberg</a>
         </small>
     </section>
-    <section id='14500' class='active'>
+    <section id='14500'>
         <h3>14,500 Years BCE</h3>
         <p></p>
     </section>
@@ -88,7 +88,7 @@ section:last-child {
             Adapted from <a href='http://www.gutenberg.org/files/2346/2346-h/2346-h.htm'>Project Gutenberg</a>
         </small>
     </section>
-    <section id='14000' class='active'>
+    <section id='14000'>
         <h3>14,000 Years BCE</h3>
         <p></p>
     </section>
@@ -96,7 +96,7 @@ section:last-child {
             Adapted from <a href='http://www.gutenberg.org/files/2346/2346-h/2346-h.htm'>Project Gutenberg</a>
         </small>
     </section>
-    <section id='13500' class='active'>
+    <section id='13500'>
         <h3>13,500 Years BCE</h3>
         <p></p>
     </section>
@@ -104,7 +104,7 @@ section:last-child {
             Adapted from <a href='http://www.gutenberg.org/files/2346/2346-h/2346-h.htm'>Project Gutenberg</a>
         </small>
     </section>
-    <section id='13000' class='active'>
+    <section id='13000'>
         <h3>13,000 Years BCE</h3>
         <p></p>
     </section>
@@ -112,7 +112,7 @@ section:last-child {
             Adapted from <a href='http://www.gutenberg.org/files/2346/2346-h/2346-h.htm'>Project Gutenberg</a>
         </small>
     </section>
-    <section id='12500' class='active'>
+    <section id='12500'>
         <h3>12,500 Years BCE</h3>
         <p></p>
     </section>
@@ -120,7 +120,7 @@ section:last-child {
             Adapted from <a href='http://www.gutenberg.org/files/2346/2346-h/2346-h.htm'>Project Gutenberg</a>
         </small>
     </section>
-    <section id='12000' class='active'>
+    <section id='12000'>
         <h3>12,000 Years BCE</h3>
         <p></p>
     </section>
@@ -128,7 +128,7 @@ section:last-child {
             Adapted from <a href='http://www.gutenberg.org/files/2346/2346-h/2346-h.htm'>Project Gutenberg</a>
         </small>
     </section>
-    <section id='11500' class='active'>
+    <section id='11500'>
         <h3>11,500 Years BCE</h3>
         <p></p>
     </section>
@@ -136,7 +136,7 @@ section:last-child {
             Adapted from <a href='http://www.gutenberg.org/files/2346/2346-h/2346-h.htm'>Project Gutenberg</a>
         </small>
     </section>
-    <section id='11000' class='active'>
+    <section id='11000'>
         <h3>11,000 Years BCE</h3>
         <p></p>
     </section>
@@ -144,7 +144,7 @@ section:last-child {
             Adapted from <a href='http://www.gutenberg.org/files/2346/2346-h/2346-h.htm'>Project Gutenberg</a>
         </small>
     </section>
-    <section id='10500' class='active'>
+    <section id='10500'>
         <h3>10,500 Years BCE</h3>
         <p></p>
     </section>
@@ -152,12 +152,8 @@ section:last-child {
             Adapted from <a href='http://www.gutenberg.org/files/2346/2346-h/2346-h.htm'>Project Gutenberg</a>
         </small>
     </section>
-    <section id='10000' class='active'>
+    <section id='10000'>
         <h3>10,000 Years BCE</h3>
-        <p></p>
-    </section>
-    <section id='Outro' class='active'>
-        <h3>Outro</h3>
         <p></p>
     </section>
 </div>
@@ -185,7 +181,7 @@ map.on('load', function (){
     'type':'fill',
     'source':'ice_18000',
     'layout':{
-      'visibility':'visible'
+      'visibility':'none'
     },
     'paint':{
       'fill-color':'#ffffff'
@@ -203,8 +199,11 @@ map.on('load', function (){
     'id':'lakes_18000',
     'type':'fill',
     'source':'lakes_18000',
+    'layout':{
+      'visibility':'none'
+    },
     'paint':{
-      'fill-color':'#0000FF'
+      'fill-color':'#75cff0'
     }
   });
 });
@@ -220,6 +219,9 @@ map.on('load', function (){
     'id':'ice_17500',
     'type':'fill',
     'source':'ice_17500',
+    'layout':{
+      'visibility':'none'
+    },
     'paint':{
       'fill-color':'#ffffff'
     }
@@ -236,8 +238,11 @@ map.on('load', function (){
     'id':'lakes_17500',
     'type':'fill',
     'source':'lakes_17500',
+    'layout':{
+      'visibility':'none'
+    },
     'paint':{
-      'fill-color':'#0000FF'
+      'fill-color':'#75cff0'
     }
   });
 });
@@ -253,6 +258,9 @@ map.on('load', function (){
     'id':'ice_17000',
     'type':'fill',
     'source':'ice_17000',
+    'layout':{
+      'visibility':'none'
+    },
     'paint':{
       'fill-color':'#ffffff'
     }
@@ -269,8 +277,11 @@ map.on('load', function (){
     'id':'lakes_17000',
     'type':'fill',
     'source':'lakes_17000',
+    'layout':{
+      'visibility':'none'
+    },
     'paint':{
-      'fill-color':'#0000FF'
+      'fill-color':'#75cff0'
     }
   });
 });
@@ -286,6 +297,9 @@ map.on('load', function (){
     'id':'ice_16500',
     'type':'fill',
     'source':'ice_16500',
+    'layout':{
+      'visibility':'none'
+    },
     'paint':{
       'fill-color':'#ffffff'
     }
@@ -302,8 +316,11 @@ map.on('load', function (){
     'id':'lakes_16500',
     'type':'fill',
     'source':'lakes_16500',
+    'layout':{
+      'visibility':'none'
+    },
     'paint':{
-      'fill-color':'#0000FF'
+      'fill-color':'#75cff0'
     }
   });
 });
@@ -319,6 +336,9 @@ map.on('load', function (){
     'id':'ice_16000',
     'type':'fill',
     'source':'ice_16000',
+    'layout':{
+      'visibility':'none'
+    },
     'paint':{
       'fill-color':'#ffffff'
     }
@@ -335,8 +355,11 @@ map.on('load', function (){
     'id':'lakes_16000',
     'type':'fill',
     'source':'lakes_16000',
+    'layout':{
+      'visibility':'none'
+    },
     'paint':{
-      'fill-color':'#0000FF'
+      'fill-color':'#75cff0'
     }
   });
 });
@@ -352,6 +375,9 @@ map.on('load', function (){
     'id':'ice_15500',
     'type':'fill',
     'source':'ice_15500',
+    'layout':{
+      'visibility':'none'
+    },
     'paint':{
       'fill-color':'#ffffff'
     }
@@ -368,8 +394,11 @@ map.on('load', function (){
     'id':'lakes_15500',
     'type':'fill',
     'source':'lakes_15500',
+    'layout':{
+      'visibility':'none'
+    },
     'paint':{
-      'fill-color':'#0000FF'
+      'fill-color':'#75cff0'
     }
   });
 });
@@ -385,6 +414,9 @@ map.on('load', function (){
     'id':'ice_15000',
     'type':'fill',
     'source':'ice_15000',
+    'layout':{
+      'visibility':'none'
+    },
     'paint':{
       'fill-color':'#ffffff'
     }
@@ -401,8 +433,11 @@ map.on('load', function (){
     'id':'lakes_15000',
     'type':'fill',
     'source':'lakes_15000',
+    'layout':{
+      'visibility':'none'
+    },
     'paint':{
-      'fill-color':'#0000FF'
+      'fill-color':'#75cff0'
     }
   });
 });
@@ -418,6 +453,9 @@ map.on('load', function (){
     'id':'ice_14500',
     'type':'fill',
     'source':'ice_14500',
+    'layout':{
+      'visibility':'none'
+    },
     'paint':{
       'fill-color':'#ffffff'
     }
@@ -434,8 +472,11 @@ map.on('load', function (){
     'id':'lakes_14500',
     'type':'fill',
     'source':'lakes_14500',
+    'layout':{
+      'visibility':'none'
+    },
     'paint':{
-      'fill-color':'#0000FF'
+      'fill-color':'#75cff0'
     }
   });
 });
@@ -451,6 +492,9 @@ map.on('load', function (){
     'id':'ice_14000',
     'type':'fill',
     'source':'ice_14000',
+    'layout':{
+      'visibility':'none'
+    },
     'paint':{
       'fill-color':'#ffffff'
     }
@@ -467,8 +511,11 @@ map.on('load', function (){
     'id':'lakes_14000',
     'type':'fill',
     'source':'lakes_14000',
+    'layout':{
+      'visibility':'none'
+    },
     'paint':{
-      'fill-color':'#0000FF'
+      'fill-color':'#75cff0'
     }
   });
 });
@@ -484,6 +531,9 @@ map.on('load', function (){
     'id':'ice_13500',
     'type':'fill',
     'source':'ice_13500',
+    'layout':{
+      'visibility':'none'
+    },
     'paint':{
       'fill-color':'#ffffff'
     }
@@ -500,8 +550,11 @@ map.on('load', function (){
     'id':'lakes_13500',
     'type':'fill',
     'source':'lakes_13500',
+    'layout':{
+      'visibility':'none'
+    },
     'paint':{
-      'fill-color':'#0000FF'
+      'fill-color':'#75cff0'
     }
   });
 });
@@ -517,6 +570,9 @@ map.on('load', function (){
     'id':'ice_13000',
     'type':'fill',
     'source':'ice_13000',
+    'layout':{
+      'visibility':'none'
+    },
     'paint':{
       'fill-color':'#ffffff'
     }
@@ -533,8 +589,11 @@ map.on('load', function (){
     'id':'lakes_13000',
     'type':'fill',
     'source':'lakes_13000',
+    'layout':{
+      'visibility':'none'
+    },
     'paint':{
-      'fill-color':'#0000FF'
+      'fill-color':'#75cff0'
     }
   });
 });
@@ -550,6 +609,9 @@ map.on('load', function (){
     'id':'ice_12500',
     'type':'fill',
     'source':'ice_12500',
+    'layout':{
+      'visibility':'none'
+    },
     'paint':{
       'fill-color':'#ffffff'
     }
@@ -566,8 +628,11 @@ map.on('load', function (){
     'id':'lakes_12500',
     'type':'fill',
     'source':'lakes_12500',
+    'layout':{
+      'visibility':'none'
+    },
     'paint':{
-      'fill-color':'#0000FF'
+      'fill-color':'#75cff0'
     }
   });
 });
@@ -583,6 +648,9 @@ map.on('load', function (){
     'id':'ice_12000',
     'type':'fill',
     'source':'ice_12000',
+    'layout':{
+      'visibility':'none'
+    },
     'paint':{
       'fill-color':'#ffffff'
     }
@@ -599,8 +667,11 @@ map.on('load', function (){
     'id':'lakes_12000',
     'type':'fill',
     'source':'lakes_12000',
+    'layout':{
+      'visibility':'none'
+    },
     'paint':{
-      'fill-color':'#0000FF'
+      'fill-color':'#75cff0'
     }
   });
 });
@@ -616,6 +687,9 @@ map.on('load', function (){
     'id':'ice_11500',
     'type':'fill',
     'source':'ice_11500',
+    'layout':{
+      'visibility':'none'
+    },
     'paint':{
       'fill-color':'#ffffff'
     }
@@ -632,8 +706,11 @@ map.on('load', function (){
     'id':'lakes_11500',
     'type':'fill',
     'source':'lakes_11500',
+    'layout':{
+      'visibility':'none'
+    },
     'paint':{
-      'fill-color':'#0000FF'
+      'fill-color':'#75cff0'
     }
   });
 });
@@ -649,6 +726,9 @@ map.on('load', function (){
     'id':'ice_11000',
     'type':'fill',
     'source':'ice_11000',
+    'layout':{
+      'visibility':'none'
+    },
     'paint':{
       'fill-color':'#ffffff'
     }
@@ -665,8 +745,11 @@ map.on('load', function (){
     'id':'lakes_11000',
     'type':'fill',
     'source':'lakes_11000',
+    'layout':{
+      'visibility':'none'
+    },
     'paint':{
-      'fill-color':'#0000FF'
+      'fill-color':'#75cff0'
     }
   });
 });
@@ -682,6 +765,9 @@ map.on('load', function (){
     'id':'ice_10500',
     'type':'fill',
     'source':'ice_10500',
+    'layout':{
+      'visibility':'none'
+    },
     'paint':{
       'fill-color':'#ffffff'
     }
@@ -698,8 +784,11 @@ map.on('load', function (){
     'id':'lakes_10500',
     'type':'fill',
     'source':'lakes_10500',
+    'layout':{
+      'visibility':'none'
+    },
     'paint':{
-      'fill-color':'#0000FF'
+      'fill-color':'#75cff0'
     }
   });
 });
@@ -715,6 +804,9 @@ map.on('load', function (){
     'id':'ice_10000',
     'type':'fill',
     'source':'ice_10000',
+    'layout':{
+      'visibility':'none'
+    },
     'paint':{
       'fill-color':'#ffffff'
     }
@@ -731,26 +823,23 @@ map.on('load', function (){
     'id':'lakes_10000',
     'type':'fill',
     'source':'lakes_10000',
+    'layout':{
+      'visibility':'none'
+    },
     'paint':{
-      'fill-color':'#0000FF'
+      'fill-color':'#75cff0'
     }
   });
 });
 
 var chapters = {
-    'intro': {
-        center: [-0.15591514, 51.51830379],
-        zoom: 15.5,
-    },
     '18000': {
-        duration: 6000,
         center: [-0.07571203, 51.51424049],
         zoom: 15,
     },
     '17500': {
         center: [-0.08533793, 51.50438536],
         zoom: 13,
-        speed: 0.6,
     },
     '17000': {
         center: [0.05991101, 51.48752939],
@@ -759,7 +848,6 @@ var chapters = {
     '16500': {
         center: [-0.18335806, 51.49439521],
         zoom: 15.3,
-        speed: 0.5
     },
     '16000': {
         center: [-0.19684993, 51.5033856],
@@ -853,7 +941,7 @@ window.onscroll = function() {
     }
 };
 
-var activeChapterName = 'intro';
+var activeChapterName = '18000';
 function setActiveChapter(chapterName) {
     if (chapterName === activeChapterName) return;
 
@@ -869,6 +957,54 @@ function isElementOnScreen(id) {
     var element = document.getElementById(id);
     var bounds = element.getBoundingClientRect();
     return bounds.top < window.innerHeight && bounds.bottom > 0;
+}
+
+//function to make layers visible
+function setActiveLayer() {
+    var layerNames = Object.keys(chapters);
+    if (chapterName = '18000') return;
+    map.getLayoutProperty(activeLayer, 'visibility');
+
+    if (visibility === 'visible') {
+      map.setLayoutProperty(activeLayer, 'visibility', 'none');
+
+    }
+
+
+    map.setLayoutProperty('ice_18000', 'visibility', 'visible');
+    map.setLayoutProperty('lakes_18000', 'visibility', 'visible');
+    map.setLayoutProperty('ice_17500', 'visibiliy', 'none');
+    map.setLayoutProperty('lakes_17500', 'visibiliy', 'none');
+    map.setLayoutProperty('ice_17000', 'visibiliy', 'none');
+    map.setLayoutProperty('lakes_17000', 'visibiliy', 'none');
+    map.setLayoutProperty('ice_16500', 'visibiliy', 'none');
+    map.setLayoutProperty('lakes_16500', 'visibiliy', 'none');
+    map.setLayoutProperty('ice_16000', 'visibiliy', 'none');
+    map.setLayoutProperty('lakes_16000', 'visibiliy', 'none');
+    map.setLayoutProperty('ice_15500', 'visibiliy', 'none');
+    map.setLayoutProperty('lakes_15500', 'visibiliy', 'none');
+    map.setLayoutProperty('ice_15000', 'visibiliy', 'none');
+    map.setLayoutProperty('lakes_15000', 'visibiliy', 'none');
+    map.setLayoutProperty('ice_14500', 'visibiliy', 'none');
+    map.setLayoutProperty('lakes_14500', 'visibiliy', 'none');
+    map.setLayoutProperty('ice_14000', 'visibiliy', 'none');
+    map.setLayoutProperty('lakes_14000', 'visibiliy', 'none');
+    map.setLayoutProperty('ice_13500', 'visibiliy', 'none');
+    map.setLayoutProperty('lakes_13500', 'visibiliy', 'none');
+    map.setLayoutProperty('ice_13000', 'visibiliy', 'none');
+    map.setLayoutProperty('lakes_13000', 'visibiliy', 'none');
+    map.setLayoutProperty('ice_12500', 'visibiliy', 'none');
+    map.setLayoutProperty('lakes_12500', 'visibiliy', 'none');
+    map.setLayoutProperty('ice_12000', 'visibiliy', 'none');
+    map.setLayoutProperty('lakes_12000', 'visibiliy', 'none');
+    map.setLayoutProperty('ice_11500', 'visibiliy', 'none');
+    map.setLayoutProperty('lakes_11500', 'visibiliy', 'none');
+    map.setLayoutProperty('ice_11000', 'visibiliy', 'none');
+    map.setLayoutProperty('lakes_11000', 'visibiliy', 'none');
+    map.setLayoutProperty('ice_10500', 'visibiliy', 'none');
+    map.setLayoutProperty('lakes_10500', 'visibiliy', 'none');
+    map.setLayoutProperty('ice_10000', 'visibiliy', 'none');
+    map.setLayoutProperty('lakes_10000', 'visibiliy', 'none');
 }
 
 </script>
