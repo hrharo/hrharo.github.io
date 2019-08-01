@@ -81,65 +81,397 @@ section:last-child {
     </section>
 </div>
 <script>
-mapboxgl.accessToken = '<your access token here>';
+mapboxgl.accessToken = 'pk.eyJ1IjoiaGFyb2giLCJhIjoiY2pvNmpneXhyMGx2ZTNwcXFzYzFzdm52dCJ9.zTx9hlyiDL0--qvBqDUuRw';
 
 var map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v11',
-    center: [-0.15591514, 51.51830379],
-    zoom: 15.5,
-    bearing: 27,
+    style: 'mapbox://styles/haroh/cjy5d99m104321cqfma1nt627',
+    center: [-122.335167, 47.608013],
+    zoom: 3,
+    bearing: 0,
     pitch: 45
+});
+
+//18000 BCE Layers
+map.on('load', function (){
+  map.addSource('ice_18000', {
+  type: 'geojson',
+  data: 'https://raw.githubusercontent.com/hrharo/hrharo.github.io/master/capstone/data/ice_18000.json'
+  });
+  map.addLayer(
+    {
+    'id':'ice_18000',
+    'type':'fill',
+    'source':'ice_18000',
+    'layout':{
+      'visibility':'none'
+    },
+    'paint':{
+      'fill-color':'#ffffff'
+    }
+  });
+});
+
+map.on('load', function (){
+  map.addSource('lakes_18000', {
+  type: 'geojson',
+  data: 'https://raw.githubusercontent.com/hrharo/hrharo.github.io/master/capstone/data/lakes_18000.json'
+  });
+  map.addLayer(
+    {
+    'id':'lakes_18000',
+    'type':'fill',
+    'source':'lakes_18000',
+    'layout':{
+      'visibility':'none'
+    },
+    'paint':{
+      'fill-color':'#75cff0'
+    }
+  });
+});
+
+//17500 BCE Layers
+map.on('load', function (){
+  map.addSource('ice_17500', {
+  type: 'geojson',
+  data: 'https://raw.githubusercontent.com/hrharo/hrharo.github.io/master/capstone/data/ice_17500.json'
+  });
+  map.addLayer(
+    {
+    'id':'ice_17500',
+    'type':'fill',
+    'source':'ice_17500',
+    'layout':{
+      'visibility':'none'
+    },
+    'paint':{
+      'fill-color':'#ffffff'
+    }
+  });
+});
+
+map.on('load', function (){
+  map.addSource('lakes_17500', {
+  type: 'geojson',
+  data: 'https://raw.githubusercontent.com/hrharo/hrharo.github.io/master/capstone/data/lakes_17500.json'
+  });
+  map.addLayer(
+    {
+    'id':'lakes_17500',
+    'type':'fill',
+    'source':'lakes_17500',
+    'layout':{
+      'visibility':'none'
+    },
+    'paint':{
+      'fill-color':'#75cff0'
+    }
+  });
+});
+
+//17000 BCE Layers
+map.on('load', function (){
+  map.addSource('ice_17000', {
+  type: 'geojson',
+  data: 'https://raw.githubusercontent.com/hrharo/hrharo.github.io/master/capstone/data/ice_17000.json'
+  });
+  map.addLayer(
+    {
+    'id':'ice_17000',
+    'type':'fill',
+    'source':'ice_17000',
+    'layout':{
+      'visibility':'none'
+    },
+    'paint':{
+      'fill-color':'#ffffff'
+    }
+  });
+});
+
+map.on('load', function (){
+  map.addSource('lakes_17000', {
+  type: 'geojson',
+  data: 'https://raw.githubusercontent.com/hrharo/hrharo.github.io/master/capstone/data/lakes_17000.json'
+  });
+  map.addLayer(
+    {
+    'id':'lakes_17000',
+    'type':'fill',
+    'source':'lakes_17000',
+    'layout':{
+      'visibility':'none'
+    },
+    'paint':{
+      'fill-color':'#75cff0'
+    }
+  });
+});
+
+//16500 BCE Layers
+map.on('load', function (){
+  map.addSource('ice_16500', {
+  type: 'geojson',
+  data: 'https://raw.githubusercontent.com/hrharo/hrharo.github.io/master/capstone/data/ice_16500.json'
+  });
+  map.addLayer(
+    {
+    'id':'ice_16500',
+    'type':'fill',
+    'source':'ice_16500',
+    'layout':{
+      'visibility':'none'
+    },
+    'paint':{
+      'fill-color':'#ffffff'
+    }
+  });
+});
+
+map.on('load', function (){
+  map.addSource('lakes_16500', {
+  type: 'geojson',
+  data: 'https://raw.githubusercontent.com/hrharo/hrharo.github.io/master/capstone/data/lakes_16500.json'
+  });
+  map.addLayer(
+    {
+    'id':'lakes_16500',
+    'type':'fill',
+    'source':'lakes_16500',
+    'layout':{
+      'visibility':'none'
+    },
+    'paint':{
+      'fill-color':'#75cff0'
+    }
+  });
+});
+
+//16000 BCE Layers
+map.on('load', function (){
+  map.addSource('ice_16000', {
+  type: 'geojson',
+  data: 'https://raw.githubusercontent.com/hrharo/hrharo.github.io/master/capstone/data/ice_16000.json'
+  });
+  map.addLayer(
+    {
+    'id':'ice_16000',
+    'type':'fill',
+    'source':'ice_16000',
+    'layout':{
+      'visibility':'none'
+    },
+    'paint':{
+      'fill-color':'#ffffff'
+    }
+  });
+});
+
+map.on('load', function (){
+  map.addSource('lakes_16000', {
+  type: 'geojson',
+  data: 'https://raw.githubusercontent.com/hrharo/hrharo.github.io/master/capstone/data/lakes_16000.json'
+  });
+  map.addLayer(
+    {
+    'id':'lakes_16000',
+    'type':'fill',
+    'source':'lakes_16000',
+    'layout':{
+      'visibility':'none'
+    },
+    'paint':{
+      'fill-color':'#75cff0'
+    }
+  });
+});
+
+//15500 BCE Layers
+map.on('load', function (){
+  map.addSource('ice_15500', {
+  type: 'geojson',
+  data: 'https://raw.githubusercontent.com/hrharo/hrharo.github.io/master/capstone/data/ice_15500.json'
+  });
+  map.addLayer(
+    {
+    'id':'ice_15500',
+    'type':'fill',
+    'source':'ice_15500',
+    'layout':{
+      'visibility':'none'
+    },
+    'paint':{
+      'fill-color':'#ffffff'
+    }
+  });
+});
+
+map.on('load', function (){
+  map.addSource('lakes_15500', {
+  type: 'geojson',
+  data: 'https://raw.githubusercontent.com/hrharo/hrharo.github.io/master/capstone/data/lakes_15500.json'
+  });
+  map.addLayer(
+    {
+    'id':'lakes_15500',
+    'type':'fill',
+    'source':'lakes_15500',
+    'layout':{
+      'visibility':'none'
+    },
+    'paint':{
+      'fill-color':'#75cff0'
+    }
+  });
+});
+
+//15000 BCE Layers
+map.on('load', function (){
+  map.addSource('ice_15000', {
+  type: 'geojson',
+  data: 'https://raw.githubusercontent.com/hrharo/hrharo.github.io/master/capstone/data/ice_15000.json'
+  });
+  map.addLayer(
+    {
+    'id':'ice_15000',
+    'type':'fill',
+    'source':'ice_15000',
+    'layout':{
+      'visibility':'none'
+    },
+    'paint':{
+      'fill-color':'#ffffff'
+    }
+  });
+});
+
+map.on('load', function (){
+  map.addSource('lakes_15000', {
+  type: 'geojson',
+  data: 'https://raw.githubusercontent.com/hrharo/hrharo.github.io/master/capstone/data/lakes_15000.json'
+  });
+  map.addLayer(
+    {
+    'id':'lakes_15000',
+    'type':'fill',
+    'source':'lakes_15000',
+    'layout':{
+      'visibility':'none'
+    },
+    'paint':{
+      'fill-color':'#75cff0'
+    }
+  });
+});
+
+//14500 BCE Layers
+map.on('load', function (){
+  map.addSource('ice_14500', {
+  type: 'geojson',
+  data: 'https://raw.githubusercontent.com/hrharo/hrharo.github.io/master/capstone/data/ice_14500.json'
+  });
+  map.addLayer(
+    {
+    'id':'ice_14500',
+    'type':'fill',
+    'source':'ice_14500',
+    'layout':{
+      'visibility':'none'
+    },
+    'paint':{
+      'fill-color':'#ffffff'
+    }
+  });
+});
+
+map.on('load', function (){
+  map.addSource('lakes_14500', {
+  type: 'geojson',
+  data: 'https://raw.githubusercontent.com/hrharo/hrharo.github.io/master/capstone/data/lakes_14500.json'
+  });
+  map.addLayer(
+    {
+    'id':'lakes_14500',
+    'type':'fill',
+    'source':'lakes_14500',
+    'layout':{
+      'visibility':'none'
+    },
+    'paint':{
+      'fill-color':'#75cff0'
+    }
+  });
+});
+
+//14000 BCE Layers
+map.on('load', function (){
+  map.addSource('ice_14000', {
+  type: 'geojson',
+  data: 'https://raw.githubusercontent.com/hrharo/hrharo.github.io/master/capstone/data/ice_14000.json'
+  });
+  map.addLayer(
+    {
+    'id':'ice_14000',
+    'type':'fill',
+    'source':'ice_14000',
+    'layout':{
+      'visibility':'none'
+    },
+    'paint':{
+      'fill-color':'#ffffff'
+    }
+  });
 });
 
 var chapters = {
     'baker': {
-        bearing: 27,
-        center: [-0.15591514, 51.51830379],
-        zoom: 15.5,
+        bearing: 0,
+        center: [-122.335167, 47.608013],
+        zoom: 3,
         pitch: 20
     },
     'aldgate': {
         duration: 6000,
-        center: [-0.07571203, 51.51424049],
-        bearing: 150,
-        zoom: 15,
+        center: [-122.200676, 47.610378],
+        bearing: 0,
+        zoom: 3,
         pitch: 0
     },
     'london-bridge': {
-        bearing: 90,
-        center: [-0.08533793, 51.50438536],
-        zoom: 13,
+        bearing: 0,
+        center: [-122.485886, 48.769768],
+        zoom: 3,
         speed: 0.6,
         pitch: 40
     },
     'woolwich': {
-        bearing: 90,
-        center: [0.05991101, 51.48752939],
-        zoom: 12.3
+        bearing: 0,
+        center: [-123.116226, 49.246292],
+        zoom: 3
     },
     'gloucester': {
-        bearing: 45,
-        center: [-0.18335806, 51.49439521],
-        zoom: 15.3,
+        bearing: 0,
+        center: [-117.426048, 47.658779],
+        zoom: 3,
         pitch: 20,
         speed: 0.5
     },
     'caulfield-gardens': {
-        bearing: 180,
-        center: [-0.19684993, 51.5033856],
-        zoom: 12.3
+        bearing: 0,
+        center: [-122.465973, 47.258728],
+        zoom: 3
     },
     'telegraph': {
-        bearing: 90,
-        center: [-0.10669358, 51.51433123],
-        zoom: 17.3,
+        bearing: 0,
+        center: [-122.676483, 45.523064],
+        zoom: 3,
         pitch: 40
     },
     'charing-cross': {
-        bearing: 90,
-        center: [-0.12416858, 51.50779757],
-        zoom: 14.3,
+        bearing: 0,
+        center: [-123.329773, 48.407326],
+        zoom: 3,
         pitch: 20
     }
 };
