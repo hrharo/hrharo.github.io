@@ -44,7 +44,7 @@ section:last-child {
 
 <div id='map'></div>
 <div id='features'>
-    <section id='lgm-18000' class='active'>
+    <section id='intro' class='active'>
         <h3>Introduction</h3>
         <p>The topography, climate, and vegetation of the Pacific Northwest, its fjords, inland waterways and islands, are a result of an extended period of glaciation and glacial retreat. This retreat influenced the physical features and the resulting succession of vegetation that led to the landscape we see today. This tool takes the user through an interpretive, interactive journey of the deglaciation events.</p>
     </section>
@@ -796,6 +796,12 @@ map.on('load', function (){
 });
 
 var chapters = {
+    'intro':{
+      bearing:0,
+      center: [-122.335167, 47.608013],
+      zoom:3,
+      pitch:20
+    },
     'lgm-18000': {
         bearing: 0,
         center: [-122.335167, 47.608013],
@@ -932,6 +938,28 @@ function isElementOnScreen(id) {
 }
 
 function setActiveLayer(activeChapterName){
+  if (activeChapterName === 'intro') {
+    map.setPaintProperty('ice_18000', 'fill-color', '#B02323');
+    map.setLayoutProperty('ice_17500', 'visibility', 'none');
+    map.setLayoutProperty('ice_17000', 'visibility', 'none');
+    map.setLayoutProperty('ice_16500', 'visibility', 'none');
+    map.setLayoutProperty('ice_16000', 'visibility', 'none');
+    map.setLayoutProperty('ice_15500', 'visibility', 'none');
+    map.setLayoutProperty('ice_15000', 'visibility', 'none');
+    map.setLayoutProperty('ice_14500', 'visibility', 'none');
+    map.setLayoutProperty('ice_14000', 'visibility', 'none');
+    map.setLayoutProperty('ice_13500', 'visibility', 'none');
+    map.setLayoutProperty('ice_13000', 'visibility', 'none');
+    map.setLayoutProperty('ice_13000', 'visibility', 'none');
+    map.setLayoutProperty('ice_12500', 'visibility', 'none');
+    map.setLayoutProperty('ice_12000', 'visibility', 'none');
+    map.setLayoutProperty('ice_11500', 'visibility', 'none');
+    map.setLayoutProperty('ice_11000', 'visibility', 'none');
+    map.setLayoutProperty('ice_10500', 'visibility', 'none');
+    map.setLayoutProperty('ice_10500', 'visibility', 'none');
+    map.setLayoutProperty('ice_10000', 'visibility', 'none');
+    map.setLayoutProperty('ice_10000', 'visibility', 'none');
+  };
     if (activeChapterName === 'lgm-18000') {
       map.setLayoutProperty('ice_18000', 'visibility', 'visible');
       map.setLayoutProperty('lakes_18000', 'visibility', 'visible');
@@ -964,9 +992,9 @@ function setActiveLayer(activeChapterName){
       map.setLayoutProperty('ice_11000', 'visibility', 'none');
       map.setLayoutProperty('lakes_11000', 'visibility', 'none');
       map.setLayoutProperty('ice_10500', 'visibility', 'none');
-      map.setLayoutProperty('ice_10500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10500', 'visibility', 'none');
       map.setLayoutProperty('ice_10000', 'visibility', 'none');
-      map.setLayoutProperty('ice_10000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10000', 'visibility', 'none');
     };
     if (activeChapterName === 'lgm-17500') {
       map.setLayoutProperty('ice_18000', 'visibility', 'none');
@@ -1000,9 +1028,9 @@ function setActiveLayer(activeChapterName){
       map.setLayoutProperty('ice_11000', 'visibility', 'none');
       map.setLayoutProperty('lakes_11000', 'visibility', 'none');
       map.setLayoutProperty('ice_10500', 'visibility', 'none');
-      map.setLayoutProperty('ice_10500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10500', 'visibility', 'none');
       map.setLayoutProperty('ice_10000', 'visibility', 'none');
-      map.setLayoutProperty('ice_10000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10000', 'visibility', 'none');
     };
     if (activeChapterName === 'lgm-17000') {
       map.setLayoutProperty('ice_18000', 'visibility', 'none');
@@ -1036,9 +1064,9 @@ function setActiveLayer(activeChapterName){
       map.setLayoutProperty('ice_11000', 'visibility', 'none');
       map.setLayoutProperty('lakes_11000', 'visibility', 'none');
       map.setLayoutProperty('ice_10500', 'visibility', 'none');
-      map.setLayoutProperty('ice_10500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10500', 'visibility', 'none');
       map.setLayoutProperty('ice_10000', 'visibility', 'none');
-      map.setLayoutProperty('ice_10000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10000', 'visibility', 'none');
     };
     if (activeChapterName === 'lgm-16500') {
       map.setLayoutProperty('ice_18000', 'visibility', 'none');
@@ -1072,9 +1100,9 @@ function setActiveLayer(activeChapterName){
       map.setLayoutProperty('ice_11000', 'visibility', 'none');
       map.setLayoutProperty('lakes_11000', 'visibility', 'none');
       map.setLayoutProperty('ice_10500', 'visibility', 'none');
-      map.setLayoutProperty('ice_10500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10500', 'visibility', 'none');
       map.setLayoutProperty('ice_10000', 'visibility', 'none');
-      map.setLayoutProperty('ice_10000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10000', 'visibility', 'none');
     };
     if (activeChapterName === 'lgm-16000') {
       map.setLayoutProperty('ice_18000', 'visibility', 'none');
@@ -1108,9 +1136,9 @@ function setActiveLayer(activeChapterName){
       map.setLayoutProperty('ice_11000', 'visibility', 'none');
       map.setLayoutProperty('lakes_11000', 'visibility', 'none');
       map.setLayoutProperty('ice_10500', 'visibility', 'none');
-      map.setLayoutProperty('ice_10500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10500', 'visibility', 'none');
       map.setLayoutProperty('ice_10000', 'visibility', 'none');
-      map.setLayoutProperty('ice_10000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10000', 'visibility', 'none');
     };
     if (activeChapterName === 'lgm-15500') {
       map.setLayoutProperty('ice_18000', 'visibility', 'none');
@@ -1144,9 +1172,9 @@ function setActiveLayer(activeChapterName){
       map.setLayoutProperty('ice_11000', 'visibility', 'none');
       map.setLayoutProperty('lakes_11000', 'visibility', 'none');
       map.setLayoutProperty('ice_10500', 'visibility', 'none');
-      map.setLayoutProperty('ice_10500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10500', 'visibility', 'none');
       map.setLayoutProperty('ice_10000', 'visibility', 'none');
-      map.setLayoutProperty('ice_10000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10000', 'visibility', 'none');
     };
     if (activeChapterName === 'lgm-15000') {
       map.setLayoutProperty('ice_18000', 'visibility', 'none');
@@ -1180,9 +1208,9 @@ function setActiveLayer(activeChapterName){
       map.setLayoutProperty('ice_11000', 'visibility', 'none');
       map.setLayoutProperty('lakes_11000', 'visibility', 'none');
       map.setLayoutProperty('ice_10500', 'visibility', 'none');
-      map.setLayoutProperty('ice_10500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10500', 'visibility', 'none');
       map.setLayoutProperty('ice_10000', 'visibility', 'none');
-      map.setLayoutProperty('ice_10000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10000', 'visibility', 'none');
     };
     if (activeChapterName === 'lgm-14500') {
       map.setLayoutProperty('ice_18000', 'visibility', 'none');
@@ -1216,9 +1244,9 @@ function setActiveLayer(activeChapterName){
       map.setLayoutProperty('ice_11000', 'visibility', 'none');
       map.setLayoutProperty('lakes_11000', 'visibility', 'none');
       map.setLayoutProperty('ice_10500', 'visibility', 'none');
-      map.setLayoutProperty('ice_10500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10500', 'visibility', 'none');
       map.setLayoutProperty('ice_10000', 'visibility', 'none');
-      map.setLayoutProperty('ice_10000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10000', 'visibility', 'none');
     };
     if (activeChapterName === 'lgm-14000') {
       map.setLayoutProperty('ice_18000', 'visibility', 'none');
@@ -1252,9 +1280,9 @@ function setActiveLayer(activeChapterName){
       map.setLayoutProperty('ice_11000', 'visibility', 'none');
       map.setLayoutProperty('lakes_11000', 'visibility', 'none');
       map.setLayoutProperty('ice_10500', 'visibility', 'none');
-      map.setLayoutProperty('ice_10500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10500', 'visibility', 'none');
       map.setLayoutProperty('ice_10000', 'visibility', 'none');
-      map.setLayoutProperty('ice_10000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10000', 'visibility', 'none');
     };
     if (activeChapterName === 'lgm-13500') {
       map.setLayoutProperty('ice_18000', 'visibility', 'none');
@@ -1288,9 +1316,9 @@ function setActiveLayer(activeChapterName){
       map.setLayoutProperty('ice_11000', 'visibility', 'none');
       map.setLayoutProperty('lakes_11000', 'visibility', 'none');
       map.setLayoutProperty('ice_10500', 'visibility', 'none');
-      map.setLayoutProperty('ice_10500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10500', 'visibility', 'none');
       map.setLayoutProperty('ice_10000', 'visibility', 'none');
-      map.setLayoutProperty('ice_10000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10000', 'visibility', 'none');
     };
     if (activeChapterName === 'lgm-13000') {
       map.setLayoutProperty('ice_18000', 'visibility', 'none');
@@ -1324,9 +1352,9 @@ function setActiveLayer(activeChapterName){
       map.setLayoutProperty('ice_11000', 'visibility', 'none');
       map.setLayoutProperty('lakes_11000', 'visibility', 'none');
       map.setLayoutProperty('ice_10500', 'visibility', 'none');
-      map.setLayoutProperty('ice_10500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10500', 'visibility', 'none');
       map.setLayoutProperty('ice_10000', 'visibility', 'none');
-      map.setLayoutProperty('ice_10000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10000', 'visibility', 'none');
     };
     if (activeChapterName === 'lgm-12500') {
       map.setLayoutProperty('ice_18000', 'visibility', 'none');
@@ -1360,9 +1388,9 @@ function setActiveLayer(activeChapterName){
       map.setLayoutProperty('ice_11000', 'visibility', 'none');
       map.setLayoutProperty('lakes_11000', 'visibility', 'none');
       map.setLayoutProperty('ice_10500', 'visibility', 'none');
-      map.setLayoutProperty('ice_10500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10500', 'visibility', 'none');
       map.setLayoutProperty('ice_10000', 'visibility', 'none');
-      map.setLayoutProperty('ice_10000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10000', 'visibility', 'none');
     };
     if (activeChapterName === 'lgm-12000') {
       map.setLayoutProperty('ice_18000', 'visibility', 'none');
@@ -1396,9 +1424,9 @@ function setActiveLayer(activeChapterName){
       map.setLayoutProperty('ice_11000', 'visibility', 'none');
       map.setLayoutProperty('lakes_11000', 'visibility', 'none');
       map.setLayoutProperty('ice_10500', 'visibility', 'none');
-      map.setLayoutProperty('ice_10500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10500', 'visibility', 'none');
       map.setLayoutProperty('ice_10000', 'visibility', 'none');
-      map.setLayoutProperty('ice_10000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10000', 'visibility', 'none');
     };
     if (activeChapterName === 'lgm-11500') {
       map.setLayoutProperty('ice_18000', 'visibility', 'none');
@@ -1432,9 +1460,9 @@ function setActiveLayer(activeChapterName){
       map.setLayoutProperty('ice_11000', 'visibility', 'none');
       map.setLayoutProperty('lakes_11000', 'visibility', 'none');
       map.setLayoutProperty('ice_10500', 'visibility', 'none');
-      map.setLayoutProperty('ice_10500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10500', 'visibility', 'none');
       map.setLayoutProperty('ice_10000', 'visibility', 'none');
-      map.setLayoutProperty('ice_10000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10000', 'visibility', 'none');
     };
     if (activeChapterName === 'lgm-11000') {
       map.setLayoutProperty('ice_18000', 'visibility', 'none');
@@ -1468,9 +1496,9 @@ function setActiveLayer(activeChapterName){
       map.setLayoutProperty('ice_11000', 'visibility', 'visible');
       map.setLayoutProperty('lakes_11000', 'visibility', 'visible');
       map.setLayoutProperty('ice_10500', 'visibility', 'none');
-      map.setLayoutProperty('ice_10500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10500', 'visibility', 'none');
       map.setLayoutProperty('ice_10000', 'visibility', 'none');
-      map.setLayoutProperty('ice_10000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10000', 'visibility', 'none');
     };
     if (activeChapterName === 'lgm-10500') {
       map.setLayoutProperty('ice_18000', 'visibility', 'none');
@@ -1504,9 +1532,9 @@ function setActiveLayer(activeChapterName){
       map.setLayoutProperty('ice_11000', 'visibility', 'none');
       map.setLayoutProperty('lakes_11000', 'visibility', 'none');
       map.setLayoutProperty('ice_10500', 'visibility', 'visible');
-      map.setLayoutProperty('ice_10500', 'visibility', 'visible');
+      map.setLayoutProperty('lakes_10500', 'visibility', 'visible');
       map.setLayoutProperty('ice_10000', 'visibility', 'none');
-      map.setLayoutProperty('ice_10000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10000', 'visibility', 'none');
     };
     if (activeChapterName === 'lgm-10000') {
       map.setLayoutProperty('ice_18000', 'visibility', 'none');
@@ -1540,9 +1568,9 @@ function setActiveLayer(activeChapterName){
       map.setLayoutProperty('ice_11000', 'visibility', 'none');
       map.setLayoutProperty('lakes_11000', 'visibility', 'none');
       map.setLayoutProperty('ice_10500', 'visibility', 'none');
-      map.setLayoutProperty('ice_10500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10500', 'visibility', 'none');
       map.setLayoutProperty('ice_10000', 'visibility', 'visible');
-      map.setLayoutProperty('ice_10000', 'visibility', 'visible');
+      map.setLayoutProperty('lakes_10000', 'visibility', 'visible');
     };
 }
 
