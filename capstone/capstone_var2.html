@@ -46,8 +46,10 @@ section:last-child {
 <div id='features'>
     <section id='intro' class='active'>
         <h3>Introduction</h3>
-        <p>The topography, climate, and vegetation of the Pacific Northwest, its fjords, inland waterways and islands, are a result of an extended period of glaciation and glacial retreat. This retreat influenced the physical features and the resulting succession of vegetation that led to the landscape we see today. This tool takes the user through an interpretive, interactive journey of the deglaciation events.<br>After using this interactive, please fill the survey
-<a href="https://forms.gle/VuFGGkjgZf5zspuj8">here</a>,</p>
+        <p>The topography, climate, and vegetation of the Pacific Northwest, its fjords, inland waterways and islands, are a result of an extended period of glaciation and glacial retreat.
+        This retreat influenced the physical features and the resulting succession of vegetation that led to the landscape we see today.
+        This tool takes the user through an interpretive, interactive journey of the deglaciation events.
+        <br><br>After using this interactive, please fill the survey <a href="https://forms.gle/VuFGGkjgZf5zspuj8">here</a>.</p>
     </section>
     <section id='lgm-18000' class='active'>
         <h3>18,000 Years BCE</h3>
@@ -120,6 +122,16 @@ section:last-child {
     <section id='Outro'>
         <h3>The landscape we see today</h3>
         <p>The landscape we see today was directly influenced by these series of growth and retreat. It is what gives this region its geographic and biological diversity, and these great changes were a result of climatic factors. This landscape can still change further.
+    </section>
+    <section id='sources'>
+        <h3>Sources</h3>
+        <p>Data:
+        <br><br>Elsevier: Ehlers, Gib0bard, Hughes: Quaternary Glaciations - Extent and Chronology Volume 15 <a href="https://booksite.elsevier.com/9780444534477/"></a>
+        <br><br>Natural Earth
+        <br><br>Other:
+        <br><br>Whitlock, C. (1992). Vegetational and climatic history of the Pacific Northwest during the last 20,000 years: Implications for understanding present-day biodiversity. The Northwest Environmental Journal, 8:5—28. Retrieved February 11, 2019, from https://www.fs.fed.us/rm/pubs/rmrs_gtr292/1992_whitlock.pdf
+        </p>
+    </section>
 </div>
 <script>
 mapboxgl.accessToken = 'pk.eyJ1IjoiaGFyb2giLCJhIjoiY2pvNmpneXhyMGx2ZTNwcXFzYzFzdm52dCJ9.zTx9hlyiDL0--qvBqDUuRw';
@@ -1550,6 +1562,78 @@ function setActiveLayer(activeChapterName){
       map.setLayoutProperty('lakes_10500', 'visibility', 'none');
       map.setLayoutProperty('ice_10000', 'visibility', 'visible');
       map.setLayoutProperty('lakes_10000', 'visibility', 'visible');
+    };
+    if (activeChapterName === 'outro') {
+      map.setLayoutProperty('ice_18000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_18000', 'visibility', 'none');
+      map.setLayoutProperty('ice_17500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_17500', 'visibility', 'none');
+      map.setLayoutProperty('ice_17000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_17000', 'visibility', 'none');
+      map.setLayoutProperty('ice_16500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_16500', 'visibility', 'none');
+      map.setLayoutProperty('ice_16000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_16000', 'visibility', 'none');
+      map.setLayoutProperty('ice_15500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_15500', 'visibility', 'none')
+      map.setLayoutProperty('ice_15000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_15000', 'visibility', 'none');
+      map.setLayoutProperty('ice_14500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_14500', 'visibility', 'none');
+      map.setLayoutProperty('ice_14000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_14000', 'visibility', 'none');
+      map.setLayoutProperty('ice_13500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_13500', 'visibility', 'none');
+      map.setLayoutProperty('ice_13000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_13000', 'visibility', 'none');
+      map.setLayoutProperty('ice_12500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_12500', 'visibility', 'none');
+      map.setLayoutProperty('ice_12000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_12000', 'visibility', 'none');
+      map.setLayoutProperty('ice_11500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_11500', 'visibility', 'none');
+      map.setLayoutProperty('ice_11000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_11000', 'visibility', 'none');
+      map.setLayoutProperty('ice_10500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10500', 'visibility', 'none');
+      map.setLayoutProperty('ice_10000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10000', 'visibility', 'none');
+    };
+    if (activeChapterName === 'sources') {
+      map.setLayoutProperty('ice_18000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_18000', 'visibility', 'none');
+      map.setLayoutProperty('ice_17500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_17500', 'visibility', 'none');
+      map.setLayoutProperty('ice_17000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_17000', 'visibility', 'none');
+      map.setLayoutProperty('ice_16500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_16500', 'visibility', 'none');
+      map.setLayoutProperty('ice_16000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_16000', 'visibility', 'none');
+      map.setLayoutProperty('ice_15500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_15500', 'visibility', 'none')
+      map.setLayoutProperty('ice_15000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_15000', 'visibility', 'none');
+      map.setLayoutProperty('ice_14500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_14500', 'visibility', 'none');
+      map.setLayoutProperty('ice_14000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_14000', 'visibility', 'none');
+      map.setLayoutProperty('ice_13500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_13500', 'visibility', 'none');
+      map.setLayoutProperty('ice_13000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_13000', 'visibility', 'none');
+      map.setLayoutProperty('ice_12500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_12500', 'visibility', 'none');
+      map.setLayoutProperty('ice_12000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_12000', 'visibility', 'none');
+      map.setLayoutProperty('ice_11500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_11500', 'visibility', 'none');
+      map.setLayoutProperty('ice_11000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_11000', 'visibility', 'none');
+      map.setLayoutProperty('ice_10500', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10500', 'visibility', 'none');
+      map.setLayoutProperty('ice_10000', 'visibility', 'none');
+      map.setLayoutProperty('lakes_10000', 'visibility', 'none');
     };
 }
 
